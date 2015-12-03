@@ -305,6 +305,110 @@
     <Subsystem>scheduler</Subsystem>
     <Version>2.5.3</Version>
     <Author>salgenerator</Author>
+    <EFDB_Topic>scheduler_rotatorConfig</EFDB_Topic>
+    <item>
+        <EFDB_Name>minpos</EFDB_Name>
+        <Description/>
+        <Frequency>0.054</Frequency>
+        <Publishers>1</Publishers>
+        <Values_per_Publisher>128</Values_per_Publisher>
+        <Size_in_bytes>8</Size_in_bytes>
+        <IDL_Type>double</IDL_Type>
+        <Units>degrees</Units>
+        <Conversion/>
+        <Sensor_location/>
+        <Count>1</Count>
+        <Instances_per_night>2332</Instances_per_night>
+        <Bytes_per_night>3958201</Bytes_per_night>
+    </item><item>
+        <EFDB_Name>maxpos</EFDB_Name>
+        <Description/>
+        <Frequency>0.054</Frequency>
+        <Publishers>1</Publishers>
+        <Values_per_Publisher>128</Values_per_Publisher>
+        <Size_in_bytes>8</Size_in_bytes>
+        <IDL_Type>double</IDL_Type>
+        <Units>degrees</Units>
+        <Conversion/>
+        <Sensor_location/>
+        <Count>1</Count>
+        <Instances_per_night>2332</Instances_per_night>
+        <Bytes_per_night>3958201</Bytes_per_night>
+    </item><item>
+        <EFDB_Name>maxspeed</EFDB_Name>
+        <Description/>
+        <Frequency>0.054</Frequency>
+        <Publishers>1</Publishers>
+        <Values_per_Publisher>128</Values_per_Publisher>
+        <Size_in_bytes>8</Size_in_bytes>
+        <IDL_Type>double</IDL_Type>
+        <Units>degrees/seconds</Units>
+        <Conversion/>
+        <Sensor_location/>
+        <Count>1</Count>
+        <Instances_per_night>2332</Instances_per_night>
+        <Bytes_per_night>3958201</Bytes_per_night>
+    </item><item>
+        <EFDB_Name>accel</EFDB_Name>
+        <Description/>
+        <Frequency>0.054</Frequency>
+        <Publishers>1</Publishers>
+        <Values_per_Publisher>128</Values_per_Publisher>
+        <Size_in_bytes>8</Size_in_bytes>
+        <IDL_Type>double</IDL_Type>
+        <Units>degrees/seconds**2</Units>
+        <Conversion/>
+        <Sensor_location/>
+        <Count>1</Count>
+        <Instances_per_night>2332</Instances_per_night>
+        <Bytes_per_night>3958201</Bytes_per_night>
+    </item><item>
+        <EFDB_Name>decel</EFDB_Name>
+        <Description/>
+        <Frequency>0.054</Frequency>
+        <Publishers>1</Publishers>
+        <Values_per_Publisher>128</Values_per_Publisher>
+        <Size_in_bytes>8</Size_in_bytes>
+        <IDL_Type>double</IDL_Type>
+        <Units>degrees/seconds**2</Units>
+        <Conversion/>
+        <Sensor_location/>
+        <Count>1</Count>
+        <Instances_per_night>2332</Instances_per_night>
+        <Bytes_per_night>3958201</Bytes_per_night>
+    </item><item>
+        <EFDB_Name>followsky</EFDB_Name>
+        <Description/>
+        <Frequency>0.054</Frequency>
+        <Publishers>1</Publishers>
+        <Values_per_Publisher>128</Values_per_Publisher>
+        <Size_in_bytes>1</Size_in_bytes>
+        <IDL_Type>boolean</IDL_Type>
+        <Units/>
+        <Conversion/>
+        <Sensor_location/>
+        <Count>1</Count>
+        <Instances_per_night>2332</Instances_per_night>
+        <Bytes_per_night>3958201</Bytes_per_night>
+    </item><item>
+        <EFDB_Name>resume_angle</EFDB_Name>
+        <Description/>
+        <Frequency>0.054</Frequency>
+        <Publishers>1</Publishers>
+        <Values_per_Publisher>128</Values_per_Publisher>
+        <Size_in_bytes>1</Size_in_bytes>
+        <IDL_Type>boolean</IDL_Type>
+        <Units/>
+        <Conversion/>
+        <Sensor_location/>
+        <Count>1</Count>
+        <Instances_per_night>2332</Instances_per_night>
+        <Bytes_per_night>3958201</Bytes_per_night>
+    </item>
+</SALTelemetry><SALTelemetry>
+    <Subsystem>scheduler</Subsystem>
+    <Version>2.5.3</Version>
+    <Author>salgenerator</Author>
     <EFDB_Topic>scheduler_domeConfig</EFDB_Topic>
     <item>
         <EFDB_Name>altitude_maxspeed</EFDB_Name>
@@ -411,6 +515,34 @@
     <Author>salgenerator</Author>
     <EFDB_Topic>scheduler_cameraConfig</EFDB_Topic>
     <item>
+        <EFDB_Name>readout_time</EFDB_Name>
+        <Description/>
+        <Frequency>0.054</Frequency>
+        <Publishers>1</Publishers>
+        <Values_per_Publisher>128</Values_per_Publisher>
+        <Size_in_bytes>8</Size_in_bytes>
+        <IDL_Type>double</IDL_Type>
+        <Units>seconds</Units>
+        <Conversion/>
+        <Sensor_location/>
+        <Count>1</Count>
+        <Instances_per_night>2332</Instances_per_night>
+        <Bytes_per_night>3958201</Bytes_per_night>
+    </item><item>
+        <EFDB_Name>shutter_time</EFDB_Name>
+        <Description/>
+        <Frequency>0.054</Frequency>
+        <Publishers>1</Publishers>
+        <Values_per_Publisher>128</Values_per_Publisher>
+        <Size_in_bytes>8</Size_in_bytes>
+        <IDL_Type>double</IDL_Type>
+        <Units>seconds</Units>
+        <Conversion/>
+        <Sensor_location/>
+        <Count>1</Count>
+        <Instances_per_night>2332</Instances_per_night>
+        <Bytes_per_night>3958201</Bytes_per_night>
+    </item><item>
         <EFDB_Name>filter_mount_time</EFDB_Name>
         <Description/>
         <Frequency>0.054</Frequency>
@@ -418,7 +550,7 @@
         <Values_per_Publisher>128</Values_per_Publisher>
         <Size_in_bytes>8</Size_in_bytes>
         <IDL_Type>double</IDL_Type>
-        <Units>degrees/seconds</Units>
+        <Units>seconds</Units>
         <Conversion/>
         <Sensor_location/>
         <Count>1</Count>
@@ -432,7 +564,7 @@
         <Values_per_Publisher>128</Values_per_Publisher>
         <Size_in_bytes>8</Size_in_bytes>
         <IDL_Type>double</IDL_Type>
-        <Units>degrees/seconds</Units>
+        <Units>seconds</Units>
         <Conversion/>
         <Sensor_location/>
         <Count>1</Count>
