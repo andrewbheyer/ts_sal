@@ -56,7 +56,7 @@
         <Values_per_Publisher>128</Values_per_Publisher>
         <Size_in_bytes>8</Size_in_bytes>
         <IDL_Type>int</IDL_Type>
-        <Units></Units>
+        <Units/>
         <Conversion/>
         <Sensor_location/>
         <Count>1</Count>
@@ -172,9 +172,9 @@
         <Frequency>0.054</Frequency>
         <Publishers>1</Publishers>
         <Values_per_Publisher>128</Values_per_Publisher>
-        <Size_in_bytes></Size_in_bytes>
+        <Size_in_bytes/>
         <IDL_Type>string</IDL_Type>
-        <Units></Units>
+        <Units/>
         <Conversion/>
         <Sensor_location/>
         <Count>1</Count>
@@ -271,7 +271,7 @@
     <Author>salgenerator</Author>
     <EFDB_Topic>scheduler_telescopeConfig</EFDB_Topic>
     <item>
-        <EFDB_Name>altitude_min</EFDB_Name>
+        <EFDB_Name>altitude_minpos</EFDB_Name>
         <Description/>
         <Frequency>0.054</Frequency>
         <Publishers>1</Publishers>
@@ -285,7 +285,7 @@
         <Instances_per_night>2332</Instances_per_night>
         <Bytes_per_night>3958201</Bytes_per_night>
     </item><item>
-        <EFDB_Name>altitude_max</EFDB_Name>
+        <EFDB_Name>altitude_maxpos</EFDB_Name>
         <Description/>
         <Frequency>0.054</Frequency>
         <Publishers>1</Publishers>
@@ -779,7 +779,7 @@
         <Instances_per_night>2332</Instances_per_night>
         <Bytes_per_night>3958201</Bytes_per_night>
     </item><item>
-        <EFDB_Name>filter_move_time</EFDB_Name>
+        <EFDB_Name>filter_change_time</EFDB_Name>
         <Description/>
         <Frequency>0.054</Frequency>
         <Publishers>1</Publishers>
@@ -798,12 +798,12 @@
         <Frequency>0.054</Frequency>
         <Publishers>1</Publishers>
         <Values_per_Publisher>128</Values_per_Publisher>
-        <Size_in_bytes></Size_in_bytes>
+        <Size_in_bytes/>
         <IDL_Type>string</IDL_Type>
         <Units/>
         <Conversion/>
         <Sensor_location/>
-        <Count></Count>
+        <Count/>
         <Instances_per_night>2332</Instances_per_night>
         <Bytes_per_night>3958201</Bytes_per_night>
     </item><item>
@@ -812,12 +812,12 @@
         <Frequency>0.054</Frequency>
         <Publishers>1</Publishers>
         <Values_per_Publisher>128</Values_per_Publisher>
-        <Size_in_bytes></Size_in_bytes>
+        <Size_in_bytes/>
         <IDL_Type>string</IDL_Type>
         <Units/>
         <Conversion/>
         <Sensor_location/>
-        <Count></Count>
+        <Count/>
         <Instances_per_night>2332</Instances_per_night>
         <Bytes_per_night>3958201</Bytes_per_night>
     </item><item>
@@ -826,12 +826,12 @@
         <Frequency>0.054</Frequency>
         <Publishers>1</Publishers>
         <Values_per_Publisher>128</Values_per_Publisher>
-        <Size_in_bytes></Size_in_bytes>
+        <Size_in_bytes/>
         <IDL_Type>string</IDL_Type>
         <Units/>
         <Conversion/>
         <Sensor_location/>
-        <Count></Count>
+        <Count/>
         <Instances_per_night>2332</Instances_per_night>
         <Bytes_per_night>3958201</Bytes_per_night>
     </item><item>
@@ -840,12 +840,12 @@
         <Frequency>0.054</Frequency>
         <Publishers>1</Publishers>
         <Values_per_Publisher>128</Values_per_Publisher>
-        <Size_in_bytes></Size_in_bytes>
+        <Size_in_bytes/>
         <IDL_Type>string</IDL_Type>
         <Units/>
         <Conversion/>
         <Sensor_location/>
-        <Count></Count>
+        <Count/>
         <Instances_per_night>2332</Instances_per_night>
         <Bytes_per_night>3958201</Bytes_per_night>
     </item>
@@ -869,7 +869,7 @@
         <Instances_per_night>2332</Instances_per_night>
         <Bytes_per_night>3958201</Bytes_per_night>
     </item><item>
-        <EFDB_Name>tel_optics_alt_limit</EFDB_Name>
+        <EFDB_Name>tel_optics_cl_alt_limit</EFDB_Name>
         <Description/>
         <Frequency>0.054</Frequency>
         <Publishers>1</Publishers>
@@ -902,12 +902,12 @@
         <Frequency>0.054</Frequency>
         <Publishers>1</Publishers>
         <Values_per_Publisher>128</Values_per_Publisher>
-        <Size_in_bytes></Size_in_bytes>
+        <Size_in_bytes/>
         <IDL_Type>string</IDL_Type>
-        <Units></Units>
+        <Units/>
         <Conversion/>
         <Sensor_location/>
-        <Count></Count>
+        <Count/>
         <Instances_per_night>2332</Instances_per_night>
         <Bytes_per_night>3958201</Bytes_per_night>
     </item><item>
@@ -916,26 +916,26 @@
         <Frequency>0.054</Frequency>
         <Publishers>1</Publishers>
         <Values_per_Publisher>128</Values_per_Publisher>
-        <Size_in_bytes></Size_in_bytes>
+        <Size_in_bytes/>
         <IDL_Type>string</IDL_Type>
-        <Units></Units>
+        <Units/>
         <Conversion/>
         <Sensor_location/>
-        <Count></Count>
+        <Count/>
         <Instances_per_night>2332</Instances_per_night>
         <Bytes_per_night>3958201</Bytes_per_night>
     </item><item>
-        <EFDB_Name>prereq_dom_settle</EFDB_Name>
+        <EFDB_Name>prereq_dom_az_settle</EFDB_Name>
         <Description/>
         <Frequency>0.054</Frequency>
         <Publishers>1</Publishers>
         <Values_per_Publisher>128</Values_per_Publisher>
-        <Size_in_bytes></Size_in_bytes>
+        <Size_in_bytes/>
         <IDL_Type>string</IDL_Type>
-        <Units></Units>
+        <Units/>
         <Conversion/>
         <Sensor_location/>
-        <Count></Count>
+        <Count/>
         <Instances_per_night>2332</Instances_per_night>
         <Bytes_per_night>3958201</Bytes_per_night>
     </item><item>
@@ -944,12 +944,12 @@
         <Frequency>0.054</Frequency>
         <Publishers>1</Publishers>
         <Values_per_Publisher>128</Values_per_Publisher>
-        <Size_in_bytes></Size_in_bytes>
+        <Size_in_bytes/>
         <IDL_Type>string</IDL_Type>
-        <Units></Units>
+        <Units/>
         <Conversion/>
         <Sensor_location/>
-        <Count></Count>
+        <Count/>
         <Instances_per_night>2332</Instances_per_night>
         <Bytes_per_night>3958201</Bytes_per_night>
     </item><item>
@@ -958,12 +958,12 @@
         <Frequency>0.054</Frequency>
         <Publishers>1</Publishers>
         <Values_per_Publisher>128</Values_per_Publisher>
-        <Size_in_bytes></Size_in_bytes>
+        <Size_in_bytes/>
         <IDL_Type>string</IDL_Type>
-        <Units></Units>
+        <Units/>
         <Conversion/>
         <Sensor_location/>
-        <Count></Count>
+        <Count/>
         <Instances_per_night>2332</Instances_per_night>
         <Bytes_per_night>3958201</Bytes_per_night>
     </item><item>
@@ -972,12 +972,12 @@
         <Frequency>0.054</Frequency>
         <Publishers>1</Publishers>
         <Values_per_Publisher>128</Values_per_Publisher>
-        <Size_in_bytes></Size_in_bytes>
+        <Size_in_bytes/>
         <IDL_Type>string</IDL_Type>
-        <Units></Units>
+        <Units/>
         <Conversion/>
         <Sensor_location/>
-        <Count></Count>
+        <Count/>
         <Instances_per_night>2332</Instances_per_night>
         <Bytes_per_night>3958201</Bytes_per_night>
     </item><item>
@@ -986,12 +986,12 @@
         <Frequency>0.054</Frequency>
         <Publishers>1</Publishers>
         <Values_per_Publisher>128</Values_per_Publisher>
-        <Size_in_bytes></Size_in_bytes>
+        <Size_in_bytes/>
         <IDL_Type>string</IDL_Type>
-        <Units></Units>
+        <Units/>
         <Conversion/>
         <Sensor_location/>
-        <Count></Count>
+        <Count/>
         <Instances_per_night>2332</Instances_per_night>
         <Bytes_per_night>3958201</Bytes_per_night>
     </item><item>
@@ -1000,26 +1000,26 @@
         <Frequency>0.054</Frequency>
         <Publishers>1</Publishers>
         <Values_per_Publisher>128</Values_per_Publisher>
-        <Size_in_bytes></Size_in_bytes>
+        <Size_in_bytes/>
         <IDL_Type>string</IDL_Type>
-        <Units></Units>
+        <Units/>
         <Conversion/>
         <Sensor_location/>
-        <Count></Count>
+        <Count/>
         <Instances_per_night>2332</Instances_per_night>
         <Bytes_per_night>3958201</Bytes_per_night>
     </item><item>
-        <EFDB_Name>prereq_rotator</EFDB_Name>
+        <EFDB_Name>prereq_tel_rot</EFDB_Name>
         <Description/>
         <Frequency>0.054</Frequency>
         <Publishers>1</Publishers>
         <Values_per_Publisher>128</Values_per_Publisher>
-        <Size_in_bytes></Size_in_bytes>
+        <Size_in_bytes/>
         <IDL_Type>string</IDL_Type>
-        <Units></Units>
+        <Units/>
         <Conversion/>
         <Sensor_location/>
-        <Count></Count>
+        <Count/>
         <Instances_per_night>2332</Instances_per_night>
         <Bytes_per_night>3958201</Bytes_per_night>
     </item><item>
@@ -1028,12 +1028,12 @@
         <Frequency>0.054</Frequency>
         <Publishers>1</Publishers>
         <Values_per_Publisher>128</Values_per_Publisher>
-        <Size_in_bytes></Size_in_bytes>
+        <Size_in_bytes/>
         <IDL_Type>string</IDL_Type>
-        <Units></Units>
+        <Units/>
         <Conversion/>
         <Sensor_location/>
-        <Count></Count>
+        <Count/>
         <Instances_per_night>2332</Instances_per_night>
         <Bytes_per_night>3958201</Bytes_per_night>
     </item><item>
@@ -1042,12 +1042,12 @@
         <Frequency>0.054</Frequency>
         <Publishers>1</Publishers>
         <Values_per_Publisher>128</Values_per_Publisher>
-        <Size_in_bytes></Size_in_bytes>
+        <Size_in_bytes/>
         <IDL_Type>string</IDL_Type>
-        <Units></Units>
+        <Units/>
         <Conversion/>
         <Sensor_location/>
-        <Count></Count>
+        <Count/>
         <Instances_per_night>2332</Instances_per_night>
         <Bytes_per_night>3958201</Bytes_per_night>
     </item><item>
@@ -1056,12 +1056,12 @@
         <Frequency>0.054</Frequency>
         <Publishers>1</Publishers>
         <Values_per_Publisher>128</Values_per_Publisher>
-        <Size_in_bytes></Size_in_bytes>
+        <Size_in_bytes/>
         <IDL_Type>string</IDL_Type>
-        <Units></Units>
+        <Units/>
         <Conversion/>
         <Sensor_location/>
-        <Count></Count>
+        <Count/>
         <Instances_per_night>2332</Instances_per_night>
         <Bytes_per_night>3958201</Bytes_per_night>
     </item><item>
@@ -1070,12 +1070,12 @@
         <Frequency>0.054</Frequency>
         <Publishers>1</Publishers>
         <Values_per_Publisher>128</Values_per_Publisher>
-        <Size_in_bytes></Size_in_bytes>
+        <Size_in_bytes/>
         <IDL_Type>string</IDL_Type>
-        <Units></Units>
+        <Units/>
         <Conversion/>
         <Sensor_location/>
-        <Count></Count>
+        <Count/>
         <Instances_per_night>2332</Instances_per_night>
         <Bytes_per_night>3958201</Bytes_per_night>
     </item><item>
@@ -1084,12 +1084,12 @@
         <Frequency>0.054</Frequency>
         <Publishers>1</Publishers>
         <Values_per_Publisher>128</Values_per_Publisher>
-        <Size_in_bytes></Size_in_bytes>
+        <Size_in_bytes/>
         <IDL_Type>string</IDL_Type>
-        <Units></Units>
+        <Units/>
         <Conversion/>
         <Sensor_location/>
-        <Count></Count>
+        <Count/>
         <Instances_per_night>2332</Instances_per_night>
         <Bytes_per_night>3958201</Bytes_per_night>
     </item><item>
@@ -1098,12 +1098,12 @@
         <Frequency>0.054</Frequency>
         <Publishers>1</Publishers>
         <Values_per_Publisher>128</Values_per_Publisher>
-        <Size_in_bytes></Size_in_bytes>
+        <Size_in_bytes/>
         <IDL_Type>string</IDL_Type>
-        <Units></Units>
+        <Units/>
         <Conversion/>
         <Sensor_location/>
-        <Count></Count>
+        <Count/>
         <Instances_per_night>2332</Instances_per_night>
         <Bytes_per_night>3958201</Bytes_per_night>
     </item><item>
@@ -1112,12 +1112,12 @@
         <Frequency>0.054</Frequency>
         <Publishers>1</Publishers>
         <Values_per_Publisher>128</Values_per_Publisher>
-        <Size_in_bytes></Size_in_bytes>
+        <Size_in_bytes/>
         <IDL_Type>string</IDL_Type>
-        <Units></Units>
+        <Units/>
         <Conversion/>
         <Sensor_location/>
-        <Count></Count>
+        <Count/>
         <Instances_per_night>2332</Instances_per_night>
         <Bytes_per_night>3958201</Bytes_per_night>
     </item>
@@ -1202,12 +1202,12 @@
         <Frequency>0.054</Frequency>
         <Publishers>1</Publishers>
         <Values_per_Publisher>128</Values_per_Publisher>
-        <Size_in_bytes></Size_in_bytes>
+        <Size_in_bytes/>
         <IDL_Type>string</IDL_Type>
         <Units/>
         <Conversion/>
         <Sensor_location/>
-        <Count></Count>
+        <Count/>
         <Instances_per_night>2332</Instances_per_night>
         <Bytes_per_night>3958201</Bytes_per_night>
     </item>
