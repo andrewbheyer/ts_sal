@@ -897,7 +897,7 @@
         <Instances_per_night>2332</Instances_per_night>
         <Bytes_per_night>3958201</Bytes_per_night>
     </item><item>
-        <EFDB_Name>prereq_dom_alt</EFDB_Name>
+        <EFDB_Name>prereq_domalt</EFDB_Name>
         <Description/>
         <Frequency>0.054</Frequency>
         <Publishers>1</Publishers>
@@ -911,7 +911,7 @@
         <Instances_per_night>2332</Instances_per_night>
         <Bytes_per_night>3958201</Bytes_per_night>
     </item><item>
-        <EFDB_Name>prereq_dom_az</EFDB_Name>
+        <EFDB_Name>prereq_domaz</EFDB_Name>
         <Description/>
         <Frequency>0.054</Frequency>
         <Publishers>1</Publishers>
@@ -925,7 +925,7 @@
         <Instances_per_night>2332</Instances_per_night>
         <Bytes_per_night>3958201</Bytes_per_night>
     </item><item>
-        <EFDB_Name>prereq_dom_az_settle</EFDB_Name>
+        <EFDB_Name>prereq_domazsettle</EFDB_Name>
         <Description/>
         <Frequency>0.054</Frequency>
         <Publishers>1</Publishers>
@@ -939,7 +939,7 @@
         <Instances_per_night>2332</Instances_per_night>
         <Bytes_per_night>3958201</Bytes_per_night>
     </item><item>
-        <EFDB_Name>prereq_tel_alt</EFDB_Name>
+        <EFDB_Name>prereq_telalt</EFDB_Name>
         <Description/>
         <Frequency>0.054</Frequency>
         <Publishers>1</Publishers>
@@ -953,7 +953,7 @@
         <Instances_per_night>2332</Instances_per_night>
         <Bytes_per_night>3958201</Bytes_per_night>
     </item><item>
-        <EFDB_Name>prereq_tel_az</EFDB_Name>
+        <EFDB_Name>prereq_telaz</EFDB_Name>
         <Description/>
         <Frequency>0.054</Frequency>
         <Publishers>1</Publishers>
@@ -967,7 +967,7 @@
         <Instances_per_night>2332</Instances_per_night>
         <Bytes_per_night>3958201</Bytes_per_night>
     </item><item>
-        <EFDB_Name>prereq_tel_optics_ol</EFDB_Name>
+        <EFDB_Name>prereq_telopticsopenloop</EFDB_Name>
         <Description/>
         <Frequency>0.054</Frequency>
         <Publishers>1</Publishers>
@@ -981,7 +981,7 @@
         <Instances_per_night>2332</Instances_per_night>
         <Bytes_per_night>3958201</Bytes_per_night>
     </item><item>
-        <EFDB_Name>prereq_tel_optics_cl</EFDB_Name>
+        <EFDB_Name>prereq_telopticsclosedloop</EFDB_Name>
         <Description/>
         <Frequency>0.054</Frequency>
         <Publishers>1</Publishers>
@@ -995,7 +995,7 @@
         <Instances_per_night>2332</Instances_per_night>
         <Bytes_per_night>3958201</Bytes_per_night>
     </item><item>
-        <EFDB_Name>prereq_tel_settle</EFDB_Name>
+        <EFDB_Name>prereq_telsettle</EFDB_Name>
         <Description/>
         <Frequency>0.054</Frequency>
         <Publishers>1</Publishers>
@@ -1009,7 +1009,7 @@
         <Instances_per_night>2332</Instances_per_night>
         <Bytes_per_night>3958201</Bytes_per_night>
     </item><item>
-        <EFDB_Name>prereq_tel_rot</EFDB_Name>
+        <EFDB_Name>prereq_telrot</EFDB_Name>
         <Description/>
         <Frequency>0.054</Frequency>
         <Publishers>1</Publishers>
@@ -1037,7 +1037,7 @@
         <Instances_per_night>2332</Instances_per_night>
         <Bytes_per_night>3958201</Bytes_per_night>
     </item><item>
-        <EFDB_Name>prereq_exposure</EFDB_Name>
+        <EFDB_Name>prereq_exposures</EFDB_Name>
         <Description/>
         <Frequency>0.054</Frequency>
         <Publishers>1</Publishers>
