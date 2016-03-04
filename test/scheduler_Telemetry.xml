@@ -411,104 +411,6 @@
         <Instances_per_night>2332</Instances_per_night>
         <Bytes_per_night>3958201</Bytes_per_night>
     </item><item>
-        <EFDB_Name>rotator_minpos</EFDB_Name>
-        <Description/>
-        <Frequency>0.054</Frequency>
-        <Publishers>1</Publishers>
-        <Values_per_Publisher>128</Values_per_Publisher>
-        <Size_in_bytes>8</Size_in_bytes>
-        <IDL_Type>double</IDL_Type>
-        <Units>degrees</Units>
-        <Conversion/>
-        <Sensor_location/>
-        <Count>1</Count>
-        <Instances_per_night>2332</Instances_per_night>
-        <Bytes_per_night>3958201</Bytes_per_night>
-    </item><item>
-        <EFDB_Name>rotator_maxpos</EFDB_Name>
-        <Description/>
-        <Frequency>0.054</Frequency>
-        <Publishers>1</Publishers>
-        <Values_per_Publisher>128</Values_per_Publisher>
-        <Size_in_bytes>8</Size_in_bytes>
-        <IDL_Type>double</IDL_Type>
-        <Units>degrees</Units>
-        <Conversion/>
-        <Sensor_location/>
-        <Count>1</Count>
-        <Instances_per_night>2332</Instances_per_night>
-        <Bytes_per_night>3958201</Bytes_per_night>
-    </item><item>
-        <EFDB_Name>rotator_maxspeed</EFDB_Name>
-        <Description/>
-        <Frequency>0.054</Frequency>
-        <Publishers>1</Publishers>
-        <Values_per_Publisher>128</Values_per_Publisher>
-        <Size_in_bytes>8</Size_in_bytes>
-        <IDL_Type>double</IDL_Type>
-        <Units>degrees/seconds</Units>
-        <Conversion/>
-        <Sensor_location/>
-        <Count>1</Count>
-        <Instances_per_night>2332</Instances_per_night>
-        <Bytes_per_night>3958201</Bytes_per_night>
-    </item><item>
-        <EFDB_Name>rotator_accel</EFDB_Name>
-        <Description/>
-        <Frequency>0.054</Frequency>
-        <Publishers>1</Publishers>
-        <Values_per_Publisher>128</Values_per_Publisher>
-        <Size_in_bytes>8</Size_in_bytes>
-        <IDL_Type>double</IDL_Type>
-        <Units>degrees/seconds**2</Units>
-        <Conversion/>
-        <Sensor_location/>
-        <Count>1</Count>
-        <Instances_per_night>2332</Instances_per_night>
-        <Bytes_per_night>3958201</Bytes_per_night>
-    </item><item>
-        <EFDB_Name>rotator_decel</EFDB_Name>
-        <Description/>
-        <Frequency>0.054</Frequency>
-        <Publishers>1</Publishers>
-        <Values_per_Publisher>128</Values_per_Publisher>
-        <Size_in_bytes>8</Size_in_bytes>
-        <IDL_Type>double</IDL_Type>
-        <Units>degrees/seconds**2</Units>
-        <Conversion/>
-        <Sensor_location/>
-        <Count>1</Count>
-        <Instances_per_night>2332</Instances_per_night>
-        <Bytes_per_night>3958201</Bytes_per_night>
-    </item><item>
-        <EFDB_Name>rotator_followsky</EFDB_Name>
-        <Description/>
-        <Frequency>0.054</Frequency>
-        <Publishers>1</Publishers>
-        <Values_per_Publisher>128</Values_per_Publisher>
-        <Size_in_bytes>1</Size_in_bytes>
-        <IDL_Type>boolean</IDL_Type>
-        <Units/>
-        <Conversion/>
-        <Sensor_location/>
-        <Count>1</Count>
-        <Instances_per_night>2332</Instances_per_night>
-        <Bytes_per_night>3958201</Bytes_per_night>
-    </item><item>
-        <EFDB_Name>rotator_resume_angle</EFDB_Name>
-        <Description/>
-        <Frequency>0.054</Frequency>
-        <Publishers>1</Publishers>
-        <Values_per_Publisher>128</Values_per_Publisher>
-        <Size_in_bytes>1</Size_in_bytes>
-        <IDL_Type>boolean</IDL_Type>
-        <Units/>
-        <Conversion/>
-        <Sensor_location/>
-        <Count>1</Count>
-        <Instances_per_night>2332</Instances_per_night>
-        <Bytes_per_night>3958201</Bytes_per_night>
-    </item><item>
         <EFDB_Name>settle_time</EFDB_Name>
         <Description/>
         <Frequency>0.054</Frequency>
@@ -516,7 +418,7 @@
         <Values_per_Publisher>128</Values_per_Publisher>
         <Size_in_bytes>8</Size_in_bytes>
         <IDL_Type>double</IDL_Type>
-        <Units>degrees/seconds**2</Units>
+        <Units>seconds</Units>
         <Conversion/>
         <Sensor_location/>
         <Count>1</Count>
