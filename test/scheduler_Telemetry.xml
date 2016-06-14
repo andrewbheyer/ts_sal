@@ -1395,7 +1395,7 @@
         <Units/>
         <Conversion/>
         <Sensor_location/>
-        <Count>6</Count>
+        <Count>10</Count>
         <Instances_per_night>2332</Instances_per_night>
         <Bytes_per_night>3958201</Bytes_per_night>
     </item><item>
@@ -1409,7 +1409,7 @@
         <Units/>
         <Conversion/>
         <Sensor_location/>
-        <Count>6</Count>
+        <Count>10</Count>
         <Instances_per_night>2332</Instances_per_night>
         <Bytes_per_night>3958201</Bytes_per_night>
     </item><item>
@@ -1423,7 +1423,7 @@
         <Units/>
         <Conversion/>
         <Sensor_location/>
-        <Count>6</Count>
+        <Count>10</Count>
         <Instances_per_night>2332</Instances_per_night>
         <Bytes_per_night>3958201</Bytes_per_night>
     </item><item>
@@ -1437,7 +1437,7 @@
         <Units/>
         <Conversion/>
         <Sensor_location/>
-        <Count>6</Count>
+        <Count>10</Count>
         <Instances_per_night>2332</Instances_per_night>
         <Bytes_per_night>3958201</Bytes_per_night>
     </item><item>
@@ -1451,7 +1451,7 @@
         <Units/>
         <Conversion/>
         <Sensor_location/>
-        <Count>6</Count>
+        <Count>10</Count>
         <Instances_per_night>2332</Instances_per_night>
         <Bytes_per_night>3958201</Bytes_per_night>
     </item><item>
@@ -1465,7 +1465,7 @@
         <Units>seconds</Units>
         <Conversion/>
         <Sensor_location/>
-        <Count>25</Count>
+        <Count>50</Count>
         <Instances_per_night>2332</Instances_per_night>
         <Bytes_per_night>3958201</Bytes_per_night>
     </item><item>
