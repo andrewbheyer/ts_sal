@@ -1147,6 +1147,20 @@
         <Instances_per_night>2332</Instances_per_night>
         <Bytes_per_night>3958201</Bytes_per_night>
     </item><item>
+        <EFDB_Name>prop_id</EFDB_Name>
+        <Description/>
+        <Frequency>0.054</Frequency>
+        <Publishers>1</Publishers>
+        <Values_per_Publisher>128</Values_per_Publisher>
+        <Size_in_bytes>8</Size_in_bytes>
+        <IDL_Type>long</IDL_Type>
+        <Units/>
+        <Conversion/>
+        <Sensor_location/>
+        <Count>1</Count>
+        <Instances_per_night>2332</Instances_per_night>
+        <Bytes_per_night>3958201</Bytes_per_night>
+    </item><item>
         <EFDB_Name>twilight_boundary</EFDB_Name>
         <Description/>
         <Frequency>0.054</Frequency>
@@ -1189,7 +1203,7 @@
         <Instances_per_night>2332</Instances_per_night>
         <Bytes_per_night>3958201</Bytes_per_night>
     </item><item>
-        <EFDB_Name>num_limit_selections</EFDB_Name>
+        <EFDB_Name>num_region_selections</EFDB_Name>
         <Description/>
         <Frequency>0.054</Frequency>
         <Publishers>1</Publishers>
@@ -1203,7 +1217,7 @@
         <Instances_per_night>2332</Instances_per_night>
         <Bytes_per_night>3958201</Bytes_per_night>
     </item><item>
-        <EFDB_Name>limit_types</EFDB_Name>
+        <EFDB_Name>region_types</EFDB_Name>
         <Description/>
         <Frequency>0.054</Frequency>
         <Publishers>1</Publishers>
@@ -1217,41 +1231,55 @@
         <Instances_per_night>2332</Instances_per_night>
         <Bytes_per_night>3958201</Bytes_per_night>
     </item><item>
-        <EFDB_Name>limit_minimums</EFDB_Name>
+        <EFDB_Name>region_minimums</EFDB_Name>
         <Description/>
         <Frequency>0.054</Frequency>
         <Publishers>1</Publishers>
         <Values_per_Publisher>128</Values_per_Publisher>
         <Size_in_bytes>8</Size_in_bytes>
         <IDL_Type>double</IDL_Type>
-        <Units/>
+        <Units>degrees</Units>
         <Conversion/>
         <Sensor_location/>
         <Count>10</Count>
         <Instances_per_night>2332</Instances_per_night>
         <Bytes_per_night>3958201</Bytes_per_night>
     </item><item>
-        <EFDB_Name>limit_maximums</EFDB_Name>
+        <EFDB_Name>region_maximums</EFDB_Name>
         <Description/>
         <Frequency>0.054</Frequency>
         <Publishers>1</Publishers>
         <Values_per_Publisher>128</Values_per_Publisher>
         <Size_in_bytes>8</Size_in_bytes>
         <IDL_Type>double</IDL_Type>
-        <Units/>
+        <Units>degrees</Units>
         <Conversion/>
         <Sensor_location/>
         <Count>10</Count>
         <Instances_per_night>2332</Instances_per_night>
         <Bytes_per_night>3958201</Bytes_per_night>
     </item><item>
-        <EFDB_Name>use_galactic_exclusion</EFDB_Name>
+        <EFDB_Name>region_bounds</EFDB_Name>
         <Description/>
         <Frequency>0.054</Frequency>
         <Publishers>1</Publishers>
         <Values_per_Publisher>128</Values_per_Publisher>
         <Size_in_bytes>8</Size_in_bytes>
-        <IDL_Type>boolean</IDL_Type>
+        <IDL_Type>double</IDL_Type>
+        <Units>degrees</Units>
+        <Conversion/>
+        <Sensor_location/>
+        <Count>10</Count>
+        <Instances_per_night>2332</Instances_per_night>
+        <Bytes_per_night>3958201</Bytes_per_night>
+    </item><item>
+        <EFDB_Name>region_combiners</EFDB_Name>
+        <Description/>
+        <Frequency>0.054</Frequency>
+        <Publishers>1</Publishers>
+        <Values_per_Publisher>128</Values_per_Publisher>
+        <Size_in_bytes/>
+        <IDL_Type>string</IDL_Type>
         <Units/>
         <Conversion/>
         <Sensor_location/>
@@ -1259,35 +1287,35 @@
         <Instances_per_night>2332</Instances_per_night>
         <Bytes_per_night>3958201</Bytes_per_night>
     </item><item>
-        <EFDB_Name>taper_l</EFDB_Name>
+        <EFDB_Name>num_exclusion_selections</EFDB_Name>
         <Description/>
         <Frequency>0.054</Frequency>
         <Publishers>1</Publishers>
         <Values_per_Publisher>128</Values_per_Publisher>
         <Size_in_bytes>8</Size_in_bytes>
-        <IDL_Type>double</IDL_Type>
-        <Units>degrees</Units>
+        <IDL_Type>long</IDL_Type>
+        <Units/>
         <Conversion/>
         <Sensor_location/>
         <Count>1</Count>
         <Instances_per_night>2332</Instances_per_night>
         <Bytes_per_night>3958201</Bytes_per_night>
     </item><item>
-        <EFDB_Name>taper_b</EFDB_Name>
+        <EFDB_Name>exclusion_types</EFDB_Name>
         <Description/>
         <Frequency>0.054</Frequency>
         <Publishers>1</Publishers>
         <Values_per_Publisher>128</Values_per_Publisher>
-        <Size_in_bytes>8</Size_in_bytes>
-        <IDL_Type>double</IDL_Type>
-        <Units>degrees</Units>
+        <Size_in_bytes/>
+        <IDL_Type>string</IDL_Type>
+        <Units/>
         <Conversion/>
         <Sensor_location/>
         <Count>1</Count>
         <Instances_per_night>2332</Instances_per_night>
         <Bytes_per_night>3958201</Bytes_per_night>
     </item><item>
-        <EFDB_Name>peak_l</EFDB_Name>
+        <EFDB_Name>exclusion_minimums</EFDB_Name>
         <Description/>
         <Frequency>0.054</Frequency>
         <Publishers>1</Publishers>
@@ -1297,7 +1325,35 @@
         <Units>degrees</Units>
         <Conversion/>
         <Sensor_location/>
-        <Count>1</Count>
+        <Count>10</Count>
+        <Instances_per_night>2332</Instances_per_night>
+        <Bytes_per_night>3958201</Bytes_per_night>
+    </item><item>
+        <EFDB_Name>exclusion_maximums</EFDB_Name>
+        <Description/>
+        <Frequency>0.054</Frequency>
+        <Publishers>1</Publishers>
+        <Values_per_Publisher>128</Values_per_Publisher>
+        <Size_in_bytes>8</Size_in_bytes>
+        <IDL_Type>double</IDL_Type>
+        <Units>degrees</Units>
+        <Conversion/>
+        <Sensor_location/>
+        <Count>10</Count>
+        <Instances_per_night>2332</Instances_per_night>
+        <Bytes_per_night>3958201</Bytes_per_night>
+    </item><item>
+        <EFDB_Name>exclusion_bounds</EFDB_Name>
+        <Description/>
+        <Frequency>0.054</Frequency>
+        <Publishers>1</Publishers>
+        <Values_per_Publisher>128</Values_per_Publisher>
+        <Size_in_bytes>8</Size_in_bytes>
+        <IDL_Type>double</IDL_Type>
+        <Units>degrees</Units>
+        <Conversion/>
+        <Sensor_location/>
+        <Count>10</Count>
         <Instances_per_night>2332</Instances_per_night>
         <Bytes_per_night>3958201</Bytes_per_night>
     </item><item>
