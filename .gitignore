@@ -3,6 +3,7 @@ lsstsal/scripts/code/include/sal/svcSAL*.h
 lsstsal/scripts/code/sql/*.sql
 lsstsal/scripts/include/ccpp*.h
 lsstsal/scripts/include/sal_*.h
+lsstsal/lib/*.so
 test/*.html
 test/idl-templates
 test/include
