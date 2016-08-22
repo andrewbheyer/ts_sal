@@ -1892,7 +1892,7 @@
     <Subsystem>scheduler</Subsystem>
     <Version>2.5.3</Version>
     <Author>salgenerator</Author>
-    <EFDB_Topic>scheduler_targetTest</EFDB_Topic>
+    <EFDB_Topic>scheduler_target</EFDB_Topic>
     <item>
         <EFDB_Name>targetId</EFDB_Name>
         <Description/>
@@ -2325,7 +2325,7 @@
     <Subsystem>scheduler</Subsystem>
     <Version>2.5.3</Version>
     <Author>salgenerator</Author>
-    <EFDB_Topic>scheduler_observationTest</EFDB_Topic>
+    <EFDB_Topic>scheduler_observation</EFDB_Topic>
     <item>
         <EFDB_Name>observationId</EFDB_Name>
         <Description/>
@@ -2576,124 +2576,7 @@
           <Explanation>http://sal.lsst.org/SAL/Telemetry/scheduler_Application_data.html</Explanation>
       </item>
 </SALTelemetry>
-<SALTelemetry>
- <Subsystem>scheduler</Subsystem>
- <Version>2.5.3</Version>
- <Author>salgenerator</Author>
- <EFDB_Topic>scheduler_targets</EFDB_Topic>
-      <item>
-          <EFDB_Name>airmass</EFDB_Name>
-          <Description/>
-          <Frequency>0.054</Frequency>
-          <Publishers>1</Publishers>
-          <Values_per_Publisher>10</Values_per_Publisher>
-          <Size_in_bytes>80</Size_in_bytes>
-          <IDL_Type>double</IDL_Type>
-          <Units/>
-          <Conversion/>
-          <Sensor_location/>
-          <Count>10</Count>
-          <Instances_per_night>2332</Instances_per_night>
-          <Bytes_per_night>186624</Bytes_per_night>
-          <Explanation>http://sal.lsst.org/SAL/Telemetry/scheduler_targets_airmass.html</Explanation>
-      </item>
-      <item>
-          <EFDB_Name>catid</EFDB_Name>
-          <Description/>
-          <Frequency>0.054</Frequency>
-          <Publishers>1</Publishers>
-          <Values_per_Publisher>10</Values_per_Publisher>
-          <Size_in_bytes>80</Size_in_bytes>
-          <IDL_Type>double</IDL_Type>
-          <Units/>
-          <Conversion/>
-          <Sensor_location/>
-          <Count>10</Count>
-          <Instances_per_night>2332</Instances_per_night>
-          <Bytes_per_night>186624</Bytes_per_night>
-          <Explanation>http://sal.lsst.org/SAL/Telemetry/scheduler_targets_catid.html</Explanation>
-      </item>
-      <item>
-          <EFDB_Name>dec</EFDB_Name>
-          <Description/>
-          <Frequency>0.054</Frequency>
-          <Publishers>1</Publishers>
-          <Values_per_Publisher>10</Values_per_Publisher>
-          <Size_in_bytes>80</Size_in_bytes>
-          <IDL_Type>double</IDL_Type>
-          <Units/>
-          <Conversion/>
-          <Sensor_location/>
-          <Count>10</Count>
-          <Instances_per_night>2332</Instances_per_night>
-          <Bytes_per_night>186624</Bytes_per_night>
-          <Explanation>http://sal.lsst.org/SAL/Telemetry/scheduler_targets_dec.html</Explanation>
-      </item>
-      <item>
-          <EFDB_Name>filter</EFDB_Name>
-          <Description/>
-          <Frequency>0.054</Frequency>
-          <Publishers>1</Publishers>
-          <Values_per_Publisher>10</Values_per_Publisher>
-          <Size_in_bytes>40</Size_in_bytes>
-          <IDL_Type>long</IDL_Type>
-          <Units/>
-          <Conversion/>
-          <Sensor_location/>
-          <Count>10</Count>
-          <Instances_per_night>2332</Instances_per_night>
-          <Bytes_per_night>93312</Bytes_per_night>
-          <Explanation>http://sal.lsst.org/SAL/Telemetry/scheduler_targets_filter.html</Explanation>
-      </item>
-      <item>
-          <EFDB_Name>numexp</EFDB_Name>
-          <Description/>
-          <Frequency>0.054</Frequency>
-          <Publishers>1</Publishers>
-          <Values_per_Publisher>10</Values_per_Publisher>
-          <Size_in_bytes>40</Size_in_bytes>
-          <IDL_Type>long</IDL_Type>
-          <Units/>
-          <Conversion/>
-          <Sensor_location/>
-          <Count>10</Count>
-          <Instances_per_night>2332</Instances_per_night>
-          <Bytes_per_night>93312</Bytes_per_night>
-          <Explanation>http://sal.lsst.org/SAL/Telemetry/scheduler_targets_numexp.html</Explanation>
-      </item>
-      <item>
-          <EFDB_Name>ra</EFDB_Name>
-          <Description/>
-          <Frequency>0.054</Frequency>
-          <Publishers>1</Publishers>
-          <Values_per_Publisher>10</Values_per_Publisher>
-          <Size_in_bytes>80</Size_in_bytes>
-          <IDL_Type>double</IDL_Type>
-          <Units/>
-          <Conversion/>
-          <Sensor_location/>
-          <Count>10</Count>
-          <Instances_per_night>2332</Instances_per_night>
-          <Bytes_per_night>186624</Bytes_per_night>
-          <Explanation>http://sal.lsst.org/SAL/Telemetry/scheduler_targets_ra.html</Explanation>
-      </item>
-      <item>
-          <EFDB_Name>rotangle</EFDB_Name>
-          <Description/>
-          <Frequency>0.054</Frequency>
-          <Publishers>1</Publishers>
-          <Values_per_Publisher>10</Values_per_Publisher>
-          <Size_in_bytes>80</Size_in_bytes>
-          <IDL_Type>double</IDL_Type>
-          <Units/>
-          <Conversion/>
-          <Sensor_location/>
-          <Count>10</Count>
-          <Instances_per_night>2332</Instances_per_night>
-          <Bytes_per_night>186624</Bytes_per_night>
-          <Explanation>http://sal.lsst.org/SAL/Telemetry/scheduler_targets_rotangle.html</Explanation>
-      </item>
-</SALTelemetry>
+
 <SALTelemetry>
  <Subsystem>scheduler</Subsystem>
  <Version>2.5.3</Version>
