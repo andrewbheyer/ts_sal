@@ -28,7 +28,7 @@
             <Values_per_Publisher>128</Values_per_Publisher>
             <Size_in_bytes>8</Size_in_bytes>
             <IDL_Type>long</IDL_Type>
-            <Units></Units>
+            <Units/>
             <Conversion/>
             <Sensor_location/>
             <Count>1</Count>
@@ -888,7 +888,7 @@
         <Values_per_Publisher>128</Values_per_Publisher>
         <Size_in_bytes>8</Size_in_bytes>
         <IDL_Type>long</IDL_Type>
-        <Units></Units>
+        <Units/>
         <Conversion/>
         <Sensor_location/>
         <Count>1</Count>
@@ -916,7 +916,7 @@
         <Values_per_Publisher>128</Values_per_Publisher>
         <Size_in_bytes>8</Size_in_bytes>
         <IDL_Type>long</IDL_Type>
-        <Units></Units>
+        <Units/>
         <Conversion/>
         <Sensor_location/>
         <Count>1</Count>
@@ -2667,6 +2667,34 @@
         <Count>1</Count>
         <Instances_per_night>2332</Instances_per_night>
         <Bytes_per_night>3958201</Bytes_per_night>
+    </item><item>
+        <EFDB_Name>altitude</EFDB_Name>
+        <Description/>
+        <Frequency>0.054</Frequency>
+        <Publishers>1</Publishers>
+        <Values_per_Publisher>128</Values_per_Publisher>
+        <Size_in_bytes>8</Size_in_bytes>
+        <IDL_Type>double</IDL_Type>
+        <Units>degrees</Units>
+        <Conversion/>
+        <Sensor_location/>
+        <Count>1</Count>
+        <Instances_per_night>2332</Instances_per_night>
+        <Bytes_per_night>3958201</Bytes_per_night>
+    </item><item>
+        <EFDB_Name>azimuth</EFDB_Name>
+        <Description/>
+        <Frequency>0.054</Frequency>
+        <Publishers>1</Publishers>
+        <Values_per_Publisher>128</Values_per_Publisher>
+        <Size_in_bytes>8</Size_in_bytes>
+        <IDL_Type>double</IDL_Type>
+        <Units>degrees</Units>
+        <Conversion/>
+        <Sensor_location/>
+        <Count>1</Count>
+        <Instances_per_night>2332</Instances_per_night>
+        <Bytes_per_night>3958201</Bytes_per_night>
     </item>
     <item>
         <EFDB_Name>num_exposures</EFDB_Name>
@@ -2705,6 +2733,188 @@
         <Size_in_bytes>8</Size_in_bytes>
         <IDL_Type>double</IDL_Type>
         <Units>seconds</Units>
+        <Conversion/>
+        <Sensor_location/>
+        <Count>1</Count>
+        <Instances_per_night>2332</Instances_per_night>
+        <Bytes_per_night>3958201</Bytes_per_night>
+    </item><item>
+        <EFDB_Name>sky_brightness</EFDB_Name>
+        <Description/>
+        <Frequency>0.054</Frequency>
+        <Publishers>1</Publishers>
+        <Values_per_Publisher>128</Values_per_Publisher>
+        <Size_in_bytes>8</Size_in_bytes>
+        <IDL_Type>double</IDL_Type>
+        <Units></Units>
+        <Conversion/>
+        <Sensor_location/>
+        <Count>1</Count>
+        <Instances_per_night>2332</Instances_per_night>
+        <Bytes_per_night>3958201</Bytes_per_night>
+    </item><item>
+        <EFDB_Name>airmass</EFDB_Name>
+        <Description/>
+        <Frequency>0.054</Frequency>
+        <Publishers>1</Publishers>
+        <Values_per_Publisher>128</Values_per_Publisher>
+        <Size_in_bytes>8</Size_in_bytes>
+        <IDL_Type>double</IDL_Type>
+        <Units></Units>
+        <Conversion/>
+        <Sensor_location/>
+        <Count>1</Count>
+        <Instances_per_night>2332</Instances_per_night>
+        <Bytes_per_night>3958201</Bytes_per_night>
+    </item><item>
+        <EFDB_Name>moon_ra</EFDB_Name>
+        <Description/>
+        <Frequency>0.054</Frequency>
+        <Publishers>1</Publishers>
+        <Values_per_Publisher>128</Values_per_Publisher>
+        <Size_in_bytes>8</Size_in_bytes>
+        <IDL_Type>double</IDL_Type>
+        <Units>degrees</Units>
+        <Conversion/>
+        <Sensor_location/>
+        <Count>1</Count>
+        <Instances_per_night>2332</Instances_per_night>
+        <Bytes_per_night>3958201</Bytes_per_night>
+    </item><item>
+        <EFDB_Name>moon_dec</EFDB_Name>
+        <Description/>
+        <Frequency>0.054</Frequency>
+        <Publishers>1</Publishers>
+        <Values_per_Publisher>128</Values_per_Publisher>
+        <Size_in_bytes>8</Size_in_bytes>
+        <IDL_Type>double</IDL_Type>
+        <Units>degrees</Units>
+        <Conversion/>
+        <Sensor_location/>
+        <Count>1</Count>
+        <Instances_per_night>2332</Instances_per_night>
+        <Bytes_per_night>3958201</Bytes_per_night>
+    </item><item>
+        <EFDB_Name>moon_alt</EFDB_Name>
+        <Description/>
+        <Frequency>0.054</Frequency>
+        <Publishers>1</Publishers>
+        <Values_per_Publisher>128</Values_per_Publisher>
+        <Size_in_bytes>8</Size_in_bytes>
+        <IDL_Type>double</IDL_Type>
+        <Units>degrees</Units>
+        <Conversion/>
+        <Sensor_location/>
+        <Count>1</Count>
+        <Instances_per_night>2332</Instances_per_night>
+        <Bytes_per_night>3958201</Bytes_per_night>
+    </item><item>
+        <EFDB_Name>moon_az</EFDB_Name>
+        <Description/>
+        <Frequency>0.054</Frequency>
+        <Publishers>1</Publishers>
+        <Values_per_Publisher>128</Values_per_Publisher>
+        <Size_in_bytes>8</Size_in_bytes>
+        <IDL_Type>double</IDL_Type>
+        <Units>degrees</Units>
+        <Conversion/>
+        <Sensor_location/>
+        <Count>1</Count>
+        <Instances_per_night>2332</Instances_per_night>
+        <Bytes_per_night>3958201</Bytes_per_night>
+    </item><item>
+        <EFDB_Name>moon_phase</EFDB_Name>
+        <Description/>
+        <Frequency>0.054</Frequency>
+        <Publishers>1</Publishers>
+        <Values_per_Publisher>128</Values_per_Publisher>
+        <Size_in_bytes>8</Size_in_bytes>
+        <IDL_Type>double</IDL_Type>
+        <Units/>
+        <Conversion/>
+        <Sensor_location/>
+        <Count>1</Count>
+        <Instances_per_night>2332</Instances_per_night>
+        <Bytes_per_night>3958201</Bytes_per_night>
+    </item><item>
+        <EFDB_Name>moon_distance</EFDB_Name>
+        <Description/>
+        <Frequency>0.054</Frequency>
+        <Publishers>1</Publishers>
+        <Values_per_Publisher>128</Values_per_Publisher>
+        <Size_in_bytes>8</Size_in_bytes>
+        <IDL_Type>double</IDL_Type>
+        <Units>degrees</Units>
+        <Conversion/>
+        <Sensor_location/>
+        <Count>1</Count>
+        <Instances_per_night>2332</Instances_per_night>
+        <Bytes_per_night>3958201</Bytes_per_night>
+    </item><item>
+        <EFDB_Name>sun_alt</EFDB_Name>
+        <Description/>
+        <Frequency>0.054</Frequency>
+        <Publishers>1</Publishers>
+        <Values_per_Publisher>128</Values_per_Publisher>
+        <Size_in_bytes>8</Size_in_bytes>
+        <IDL_Type>double</IDL_Type>
+        <Units>degrees</Units>
+        <Conversion/>
+        <Sensor_location/>
+        <Count>1</Count>
+        <Instances_per_night>2332</Instances_per_night>
+        <Bytes_per_night>3958201</Bytes_per_night>
+    </item><item>
+        <EFDB_Name>sun_az</EFDB_Name>
+        <Description/>
+        <Frequency>0.054</Frequency>
+        <Publishers>1</Publishers>
+        <Values_per_Publisher>128</Values_per_Publisher>
+        <Size_in_bytes>8</Size_in_bytes>
+        <IDL_Type>double</IDL_Type>
+        <Units>degrees</Units>
+        <Conversion/>
+        <Sensor_location/>
+        <Count>1</Count>
+        <Instances_per_night>2332</Instances_per_night>
+        <Bytes_per_night>3958201</Bytes_per_night>
+    </item><item>
+        <EFDB_Name>sun_ra</EFDB_Name>
+        <Description/>
+        <Frequency>0.054</Frequency>
+        <Publishers>1</Publishers>
+        <Values_per_Publisher>128</Values_per_Publisher>
+        <Size_in_bytes>8</Size_in_bytes>
+        <IDL_Type>double</IDL_Type>
+        <Units>degrees</Units>
+        <Conversion/>
+        <Sensor_location/>
+        <Count>1</Count>
+        <Instances_per_night>2332</Instances_per_night>
+        <Bytes_per_night>3958201</Bytes_per_night>
+    </item><item>
+        <EFDB_Name>sun_dec</EFDB_Name>
+        <Description/>
+        <Frequency>0.054</Frequency>
+        <Publishers>1</Publishers>
+        <Values_per_Publisher>128</Values_per_Publisher>
+        <Size_in_bytes>8</Size_in_bytes>
+        <IDL_Type>double</IDL_Type>
+        <Units>degrees</Units>
+        <Conversion/>
+        <Sensor_location/>
+        <Count>1</Count>
+        <Instances_per_night>2332</Instances_per_night>
+        <Bytes_per_night>3958201</Bytes_per_night>
+    </item><item>
+        <EFDB_Name>sun_elong</EFDB_Name>
+        <Description/>
+        <Frequency>0.054</Frequency>
+        <Publishers>1</Publishers>
+        <Values_per_Publisher>128</Values_per_Publisher>
+        <Size_in_bytes>8</Size_in_bytes>
+        <IDL_Type>double</IDL_Type>
+        <Units>degrees</Units>
         <Conversion/>
         <Sensor_location/>
         <Count>1</Count>
