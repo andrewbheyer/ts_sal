@@ -213,6 +213,62 @@
         <Count>1</Count>
         <Instances_per_night>2332</Instances_per_night>
         <Bytes_per_night>3958201</Bytes_per_night>
+    </item><item>
+        <EFDB_Name>ignore_sky_brightness</EFDB_Name>
+        <Description/>
+        <Frequency>0.054</Frequency>
+        <Publishers>1</Publishers>
+        <Values_per_Publisher>128</Values_per_Publisher>
+        <Size_in_bytes>1</Size_in_bytes>
+        <IDL_Type>boolean</IDL_Type>
+        <Units/>
+        <Conversion/>
+        <Sensor_location/>
+        <Count>1</Count>
+        <Instances_per_night>2332</Instances_per_night>
+        <Bytes_per_night>3958201</Bytes_per_night>
+    </item><item>
+        <EFDB_Name>ignore_airmass</EFDB_Name>
+        <Description/>
+        <Frequency>0.054</Frequency>
+        <Publishers>1</Publishers>
+        <Values_per_Publisher>128</Values_per_Publisher>
+        <Size_in_bytes>1</Size_in_bytes>
+        <IDL_Type>boolean</IDL_Type>
+        <Units/>
+        <Conversion/>
+        <Sensor_location/>
+        <Count>1</Count>
+        <Instances_per_night>2332</Instances_per_night>
+        <Bytes_per_night>3958201</Bytes_per_night>
+    </item><item>
+        <EFDB_Name>ignore_clouds</EFDB_Name>
+        <Description/>
+        <Frequency>0.054</Frequency>
+        <Publishers>1</Publishers>
+        <Values_per_Publisher>128</Values_per_Publisher>
+        <Size_in_bytes>1</Size_in_bytes>
+        <IDL_Type>boolean</IDL_Type>
+        <Units/>
+        <Conversion/>
+        <Sensor_location/>
+        <Count>1</Count>
+        <Instances_per_night>2332</Instances_per_night>
+        <Bytes_per_night>3958201</Bytes_per_night>
+    </item><item>
+        <EFDB_Name>ignore_seeing</EFDB_Name>
+        <Description/>
+        <Frequency>0.054</Frequency>
+        <Publishers>1</Publishers>
+        <Values_per_Publisher>128</Values_per_Publisher>
+        <Size_in_bytes>1</Size_in_bytes>
+        <IDL_Type>boolean</IDL_Type>
+        <Units/>
+        <Conversion/>
+        <Sensor_location/>
+        <Count>1</Count>
+        <Instances_per_night>2332</Instances_per_night>
+        <Bytes_per_night>3958201</Bytes_per_night>
     </item>
 </SALTelemetry>
 <SALTelemetry>
@@ -2746,7 +2802,7 @@
         <Values_per_Publisher>128</Values_per_Publisher>
         <Size_in_bytes>8</Size_in_bytes>
         <IDL_Type>double</IDL_Type>
-        <Units></Units>
+        <Units/>
         <Conversion/>
         <Sensor_location/>
         <Count>1</Count>
@@ -2760,7 +2816,7 @@
         <Values_per_Publisher>128</Values_per_Publisher>
         <Size_in_bytes>8</Size_in_bytes>
         <IDL_Type>double</IDL_Type>
-        <Units></Units>
+        <Units/>
         <Conversion/>
         <Sensor_location/>
         <Count>1</Count>
