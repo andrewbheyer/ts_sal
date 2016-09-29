@@ -28,6 +28,28 @@
         <Sensor_location></Sensor_location>
         <Count>1</Count>
     </item>
+    <item>
+        <EFDB_Name>is_down</EFDB_Name>
+        <Description></Description>
+        <Frequency>0.054</Frequency>
+        <Size_in_bytes>1</Size_in_bytes>
+        <IDL_Type>boolean</IDL_Type>
+        <Units></Units>
+        <Conversion></Conversion>
+        <Sensor_location></Sensor_location>
+        <Count>1</Count>
+    </item>
+    <item>
+        <EFDB_Name>down_duration</EFDB_Name>
+        <Description></Description>
+        <Frequency>0.054</Frequency>
+        <Size_in_bytes>8</Size_in_bytes>
+        <IDL_Type>double</IDL_Type>
+        <Units>days</Units>
+        <Conversion></Conversion>
+        <Sensor_location></Sensor_location>
+        <Count>1</Count>
+    </item>
 </SALTelemetry>
 <SALTelemetry>
     <Subsystem>scheduler</Subsystem>
@@ -99,7 +121,7 @@
         <Units></Units>
         <Conversion></Conversion>
         <Sensor_location></Sensor_location>
-        <Count></Count>
+        <Count>1</Count>
     </item>
     <item>
         <EFDB_Name>filter_to_unmount</EFDB_Name>
@@ -110,7 +132,7 @@
         <Units></Units>
         <Conversion></Conversion>
         <Sensor_location></Sensor_location>
-        <Count></Count>
+        <Count>1</Count>
     </item>
 </SALTelemetry>
 <SALTelemetry>
@@ -829,7 +851,7 @@
         <Units></Units>
         <Conversion></Conversion>
         <Sensor_location></Sensor_location>
-        <Count></Count>
+        <Count>1</Count>
     </item>
     <item>
         <EFDB_Name>filter_pos</EFDB_Name>
@@ -840,7 +862,7 @@
         <Units></Units>
         <Conversion></Conversion>
         <Sensor_location></Sensor_location>
-        <Count></Count>
+        <Count>1</Count>
     </item>
     <item>
         <EFDB_Name>filter_removable</EFDB_Name>
@@ -851,7 +873,7 @@
         <Units></Units>
         <Conversion></Conversion>
         <Sensor_location></Sensor_location>
-        <Count></Count>
+        <Count>1</Count>
     </item>
     <item>
         <EFDB_Name>filter_unmounted</EFDB_Name>
@@ -862,7 +884,7 @@
         <Units></Units>
         <Conversion></Conversion>
         <Sensor_location></Sensor_location>
-        <Count></Count>
+        <Count>1</Count>
     </item>
 </SALTelemetry>
 <SALTelemetry>
@@ -879,7 +901,7 @@
         <Units></Units>
         <Conversion></Conversion>
         <Sensor_location></Sensor_location>
-        <Count></Count>
+        <Count>1</Count>
     </item>
     <item>
         <EFDB_Name>prereq_domaz</EFDB_Name>
@@ -890,7 +912,7 @@
         <Units></Units>
         <Conversion></Conversion>
         <Sensor_location></Sensor_location>
-        <Count></Count>
+        <Count>1</Count>
     </item>
     <item>
         <EFDB_Name>prereq_domazsettle</EFDB_Name>
@@ -901,7 +923,7 @@
         <Units></Units>
         <Conversion></Conversion>
         <Sensor_location></Sensor_location>
-        <Count></Count>
+        <Count>1</Count>
     </item>
     <item>
         <EFDB_Name>prereq_telalt</EFDB_Name>
@@ -912,7 +934,7 @@
         <Units></Units>
         <Conversion></Conversion>
         <Sensor_location></Sensor_location>
-        <Count></Count>
+        <Count>1</Count>
     </item>
     <item>
         <EFDB_Name>prereq_telaz</EFDB_Name>
@@ -923,7 +945,7 @@
         <Units></Units>
         <Conversion></Conversion>
         <Sensor_location></Sensor_location>
-        <Count></Count>
+        <Count>1</Count>
     </item>
     <item>
         <EFDB_Name>prereq_telopticsopenloop</EFDB_Name>
@@ -934,7 +956,7 @@
         <Units></Units>
         <Conversion></Conversion>
         <Sensor_location></Sensor_location>
-        <Count></Count>
+        <Count>1</Count>
     </item>
     <item>
         <EFDB_Name>prereq_telopticsclosedloop</EFDB_Name>
@@ -945,7 +967,7 @@
         <Units></Units>
         <Conversion></Conversion>
         <Sensor_location></Sensor_location>
-        <Count></Count>
+        <Count>1</Count>
     </item>
     <item>
         <EFDB_Name>prereq_telsettle</EFDB_Name>
@@ -956,7 +978,7 @@
         <Units></Units>
         <Conversion></Conversion>
         <Sensor_location></Sensor_location>
-        <Count></Count>
+        <Count>1</Count>
     </item>
     <item>
         <EFDB_Name>prereq_telrot</EFDB_Name>
@@ -967,7 +989,7 @@
         <Units></Units>
         <Conversion></Conversion>
         <Sensor_location></Sensor_location>
-        <Count></Count>
+        <Count>1</Count>
     </item>
     <item>
         <EFDB_Name>prereq_filter</EFDB_Name>
@@ -978,7 +1000,7 @@
         <Units></Units>
         <Conversion></Conversion>
         <Sensor_location></Sensor_location>
-        <Count></Count>
+        <Count>1</Count>
     </item>
     <item>
         <EFDB_Name>prereq_exposures</EFDB_Name>
@@ -989,7 +1011,7 @@
         <Units></Units>
         <Conversion></Conversion>
         <Sensor_location></Sensor_location>
-        <Count></Count>
+        <Count>1</Count>
     </item>
     <item>
         <EFDB_Name>prereq_readout</EFDB_Name>
@@ -1000,7 +1022,7 @@
         <Units></Units>
         <Conversion></Conversion>
         <Sensor_location></Sensor_location>
-        <Count></Count>
+        <Count>1</Count>
     </item>
     <item>
         <EFDB_Name>prereq_adc</EFDB_Name>
@@ -1011,7 +1033,7 @@
         <Units></Units>
         <Conversion></Conversion>
         <Sensor_location></Sensor_location>
-        <Count></Count>
+        <Count>1</Count>
     </item>
     <item>
         <EFDB_Name>prereq_ins_optics</EFDB_Name>
@@ -1022,7 +1044,7 @@
         <Units></Units>
         <Conversion></Conversion>
         <Sensor_location></Sensor_location>
-        <Count></Count>
+        <Count>1</Count>
     </item>
     <item>
         <EFDB_Name>prereq_guider_pos</EFDB_Name>
@@ -1033,7 +1055,7 @@
         <Units></Units>
         <Conversion></Conversion>
         <Sensor_location></Sensor_location>
-        <Count></Count>
+        <Count>1</Count>
     </item>
     <item>
         <EFDB_Name>prereq_guider_adq</EFDB_Name>
@@ -1044,7 +1066,7 @@
         <Units></Units>
         <Conversion></Conversion>
         <Sensor_location></Sensor_location>
-        <Count></Count>
+        <Count>1</Count>
     </item>
 </SALTelemetry>
 <SALTelemetry>
@@ -1155,7 +1177,7 @@
         <Units></Units>
         <Conversion></Conversion>
         <Sensor_location></Sensor_location>
-        <Count></Count>
+        <Count>1</Count>
     </item>
 </SALTelemetry>
 <SALTelemetry>
@@ -1733,6 +1755,17 @@
     </item>
     <item>
         <EFDB_Name>request_time</EFDB_Name>
+        <Description></Description>
+        <Frequency>0.054</Frequency>
+        <Size_in_bytes>8</Size_in_bytes>
+        <IDL_Type>double</IDL_Type>
+        <Units>seconds</Units>
+        <Conversion></Conversion>
+        <Sensor_location></Sensor_location>
+        <Count>1</Count>
+    </item>
+    <item>
+        <EFDB_Name>request_mjd</EFDB_Name>
         <Description></Description>
         <Frequency>0.054</Frequency>
         <Size_in_bytes>8</Size_in_bytes>
