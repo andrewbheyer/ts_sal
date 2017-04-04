@@ -194,7 +194,7 @@ int SAL_SALData::acceptCommand_[set i]( SALData_command_[set i]C *data )
 salReturn SAL_SALData::waitForCompletion_[set i]( int cmdSeqNum , unsigned int timeout )
 \{
    salReturn status = SAL__OK;
-   int countdown = timeout*10;
+   int countdown = timeout*100;
    SALData::ackcmdSeq response;
    int actorIdx = SAL__SALData_command_[set i]_ACTOR;
 
