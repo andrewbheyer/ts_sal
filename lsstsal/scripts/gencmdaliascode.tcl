@@ -260,7 +260,7 @@ salReturn SAL_SALData::getResponse_[set i](SALData::ackcmdSeq data)
     sal\[actorIdxCmd\].error = data\[j\].error;
     strcpy(sal\[actorIdxCmd\].result,DDS::string_dup(data\[j\].result));
    \} else \{
-      cout << \"=== \[getResponse_[set i]\] No ack yet!\" << endl;
+//      cout << \"=== \[getResponse_[set i]\] No ack yet!\" << endl;
       status = SAL__CMD_NOACK;
    \}
   \}
