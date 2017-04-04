@@ -9,14 +9,16 @@ CXX           = g++
 LD            = $(CXX) $(CCFLAGS) $(CPPFLAGS)
 AR            = ar
 PICFLAGS      = -fPIC
-CPPFLAGS      = $(PICFLAGS) $(GENFLAGS) -g $(SAL_CPPFLAGS) -D_REENTRANT -Wall -I"." -I"$(OSPL_HOME)/examples/include" -I"$(OSPL_HOME)/examples" -I"$(OSPL_HOME)/include" -I"$(OSPL_HOME)/include/sys" -I"$(OSPL_HOME)/include/dcps/C++/SACPP" -I"$(SAL_HOME)/include" -I../../../SALSubsys/cpp/src -I../../../SALSubsys/cpp -I"$(SAL_WORK_DIR)/include" -Wno-write-strings #-DSAL_SUBSYSTEM_ID_IS_KEYED
+MYSQLCC       = 'mysql_config --cflags'
+MYSQLLD       = 'mysql_config --libs'
+CPPFLAGS      = $(PICFLAGS) $(GENFLAGS) $(MYSQLCC) -g $(SAL_CPPFLAGS) -D_REENTRANT -Wall -I"." -I"$(OSPL_HOME)/include" -I"$(OSPL_HOME)/include/sys" -I"$(OSPL_HOME)/include/dcps/C++/SACPP" -I"$(SAL_HOME)/include" -I../../../SALSubsys/cpp/src -I../../../SALSubsys/cpp -I"$(SAL_WORK_DIR)/include" -Wno-write-strings #-DSAL_SUBSYSTEM_ID_IS_KEYED
 OBJEXT        = .o
 OUTPUT_OPTION = -o "$@"
 COMPILE.c     = $(CC) $(CFLAGS) $(CPPFLAGS) -c
 COMPILE.cc    = $(CXX) $(CCFLAGS) $(CPPFLAGS) -c
-LDFLAGS       = -L"." -L"$(OSPL_HOME)/lib" -Wl,-rpath,\$$ORIGIN -Wl,-rpath,\$$ORIGIN/$(OSPL_HOME)/lib -L"$(SAL_HOME)/lib"
+LDFLAGS       = $(MYSQLLD) -L"." -L"$(OSPL_HOME)/lib" -Wl,-rpath,\$$ORIGIN -Wl,-rpath,\$$ORIGIN/$(OSPL_HOME)/lib -L"$(SAL_HOME)/lib"
 CCC           = $(CXX)
-MAKEFILE      = Makefile.sacpp_SALData_pub
+MAKEFILE      = Makefile.sacpp_SALData_readers
 DEPENDENCIES  = .depend.$(MAKEFILE)
 BTARGETDIR    = ./
 BIN           = $(BTARGETDIR)sacpp_SAL_pub$(EXESUFFIX)$(EXEEXT)
@@ -34,8 +36,12 @@ LIBPREFIX     = lib
 LIBSUFFIX     = 
 GENFLAGS      = -g
 LDLIBS        = -l"sacpp_SAL_types$(LIBSUFFIX)" -l"dcpssacpp" -l"dcpsgapi" -l"ddsuser" -l"ddskernel" -l"ddsserialization" -l"ddsconfparser" -l"ddsconf" -l"ddsdatabase" -l"ddsutil" -l"ddsos" -ldl $(subst lib,-l,$(sort $(basename $(notdir $(wildcard /usr/lib/librt.so /lib/librt.so))))) -lpthread
-OBJS          = .obj/CheckStatus$(OBJEXT) .obj/SAL_SALSubsys$(OBJEXT) .obj/SALDataDataPublisher$(OBJEXT)
-SRC           = ../src/CheckStatus.cpp ../src/SAL_SALSubsys.cpp ../src/SALDataDataPublisher.cpp
+OBJ1          = .obj/CheckStatus$(OBJEXT) .obj/SAL_SALSubsys$(OBJEXT) .obj/sacpp_SALData_telemetry_reader$(OBJEXT) 
+SRC1           = ../src/CheckStatus.cpp ../src/SAL_SALSubsys.cpp ../src/sacpp_SALData_telemetry_reader.cpp
+OBJ2          = .obj/CheckStatus$(OBJEXT) .obj/SAL_SALSubsys$(OBJEXT) .obj/sacpp_SALData_command_reader$(OBJEXT) 
+SRC2           = ../src/CheckStatus.cpp ../src/SAL_SALSubsys.cpp ../src/sacpp_SALData_command_reader.cpp
+OBJ3          = .obj/CheckStatus$(OBJEXT) .obj/SAL_SALSubsys$(OBJEXT) .obj/sacpp_SALData_event_reader$(OBJEXT) 
+SRC3           = ../src/CheckStatus.cpp ../src/SAL_SALSubsys.cpp ../src/sacpp_SALData_event_reader.cpp
 LINK.cc       = $(LD) $(LDFLAGS)
 EXPORTFLAGS   = 
 endif
@@ -45,14 +51,16 @@ CXX           = g++
 LD            = $(CXX) $(CCFLAGS) $(CPPFLAGS)
 AR            = ar
 PICFLAGS      = -fPIC
-CPPFLAGS      = $(PICFLAGS) $(GENFLAGS) $(SAL_CPPFLAGS) -D_REENTRANT -Wall -I"." -I"$(OSPL_HOME)/examples/include" -I"$(OSPL_HOME)/examples" -I"$(OSPL_HOME)/include" -I"$(OSPL_HOME)/include/sys" -I"$(OSPL_HOME)/include/dcps/C++/SACPP"
+MYSQLCC       = 'mysql_config --cflags'
+MYSQLLD       = 'mysql_config --libs'
+CPPFLAGS      = $(PICFLAGS) $(MYSQLCC) $(GENFLAGS) $(SAL_CPPFLAGS) -D_REENTRANT -Wall -I"." -I"$(OSPL_HOME)/include" -I"$(OSPL_HOME)/include/sys" -I"$(OSPL_HOME)/include/dcps/C++/SACPP"
 OBJEXT        = .o
 OUTPUT_OPTION = -o "$@"
 COMPILE.c     = $(CC) $(CFLAGS) $(CPPFLAGS) -c
 COMPILE.cc    = $(CXX) $(CCFLAGS) $(CPPFLAGS) -c
-LDFLAGS       = -L"." -L"$(OSPL_HOME)/lib" -Wl,-rpath,\$$ORIGIN -Wl,-rpath,\$$ORIGIN/$(OSPL_HOME)/lib
+LDFLAGS       = $(MYSQLLD) -L"." -L"$(OSPL_HOME)/lib" -Wl,-rpath,\$$ORIGIN -Wl,-rpath,\$$ORIGIN/$(OSPL_HOME)/lib
 CCC           = $(CXX)
-MAKEFILE      = Makefile.sacpp_SAL_pub
+MAKEFILE      = Makefile.sacpp_SALData_readers
 DEPENDENCIES  = .depend.$(MAKEFILE)
 BTARGETDIR    = ./
 BIN           = $(BTARGETDIR)sacpp_SAL_pub$(EXESUFFIX)$(EXEEXT)
@@ -70,8 +78,12 @@ LIBPREFIX     = lib
 LIBSUFFIX     = 
 GENFLAGS      = -g
 LDLIBS        = -l"sacpp_SAL_types$(LIBSUFFIX)" -l"dcpssacpp" -l"dcpsgapi" -l"ddsuser" -l"ddskernel" -l"ddsserialization" -l"ddsconfparser" -l"ddsconf" -l"ddsdatabase" -l"ddsutil" -l"ddsos" -ldl $(subst lib,-l,$(sort $(basename $(notdir $(wildcard /usr/lib/librt.so /lib/librt.so))))) -lpthread
-OBJS          = .obj/CheckStatus$(OBJEXT) .obj/SAL_SALSubsys$(OBJEXT) .obj/SALDataDataPublisher$(OBJEXT)
-SRC           = ../src/CheckStatus.cpp ../src/SAL_SALSubsys.cpp ../src/SALDataDataPublisher.cpp
+OBJ1          = .obj/CheckStatus$(OBJEXT) .obj/SAL_SALSubsys$(OBJEXT) .obj/sacpp_SALData_telemetry_reader$(OBJEXT) 
+SRC1           = ../src/CheckStatus.cpp ../src/SAL_SALSubsys.cpp ../src/sacpp_SALData_telemetry_reader.cpp
+OBJ2          = .obj/CheckStatus$(OBJEXT) .obj/SAL_SALSubsys$(OBJEXT) .obj/sacpp_SALData_command_reader$(OBJEXT) 
+SRC2           = ../src/CheckStatus.cpp ../src/SAL_SALSubsys.cpp ../src/sacpp_SALData_command_reader.cpp
+OBJ3          = .obj/CheckStatus$(OBJEXT) .obj/SAL_SALSubsys$(OBJEXT) .obj/sacpp_SALData_event_reader$(OBJEXT) 
+SRC3           = ../src/CheckStatus.cpp ../src/SAL_SALSubsys.cpp ../src/sacpp_SALData_event_reader.cpp
 LINK.cc       = $(LD) $(LDFLAGS)
 EXPORTFLAGS   = 
 endif
@@ -80,12 +92,19 @@ endif
 #       Local targets
 #----------------------------------------------------------------------------
 
-all: $(BIN)
+all: $(BIN1) $(BIN2) $BIN3)
 
-$(BIN): $(OBJS)
+$(BIN1): $(OBJ1)
 	@$(TESTDIRSTART) "$(BTARGETDIR)" $(TESTDIREND) $(MKDIR) "$(BTARGETDIR)"
-	$(LINK.cc) $(OBJS) $(LDLIBS) $(OUTPUT_OPTION)
+	$(LINK.cc) $(OBJ1) $(LDLIBS) $(OUTPUT_OPTION)
 
+$(BIN2): $(OBJ2)
+	@$(TESTDIRSTART) "$(BTARGETDIR)" $(TESTDIREND) $(MKDIR) "$(BTARGETDIR)"
+	$(LINK.cc) $(OBJ2) $(LDLIBS) $(OUTPUT_OPTION)
+
+$(BIN3): $(OBJ13)
+	@$(TESTDIRSTART) "$(BTARGETDIR)" $(TESTDIREND) $(MKDIR) "$(BTARGETDIR)"
+	$(LINK.cc) $(OBJ3) $(LDLIBS) $(OUTPUT_OPTION)
 generated: $(GENERATED_DIRTY)
 	@-:
 
@@ -97,15 +116,22 @@ generated: $(GENERATED_DIRTY)
 	@$(TESTDIRSTART) ".obj/../src" $(TESTDIREND) $(MKDIR) ".obj/../src"
 	$(COMPILE.cc) $(EXPORTFLAGS) $(OUTPUT_OPTION) ../src/SAL_SALSubsys.cpp
 
-.obj/SALDataDataPublisher$(OBJEXT): ../src/SALDataDataPublisher.cpp
+.obj/sacpp_SALData_telemetry_reader$(OBJEXT): ../src/sacpp_SALData_telemetry_reader.cpp
 	@$(TESTDIRSTART) ".obj/../src" $(TESTDIREND) $(MKDIR) ".obj/../src"
-	$(COMPILE.cc) $(EXPORTFLAGS) $(OUTPUT_OPTION) ../src/SALDataDataPublisher.cpp
+	$(COMPILE.cc) $(EXPORTFLAGS) $(OUTPUT_OPTION) ../src/sacpp_SALData_telemetry_reader.cpp
 
+.obj/sacpp_SALData_command_reader$(OBJEXT): ../src/sacpp_SALData_command_reader.cpp
+	@$(TESTDIRSTART) ".obj/../src" $(TESTDIREND) $(MKDIR) ".obj/../src"
+	$(COMPILE.cc) $(EXPORTFLAGS) $(OUTPUT_OPTION) ../src/sacpp_SALData_command_reader.cpp
+
+.obj/sacpp_SALData_event_reader$(OBJEXT): ../src/sacpp_SALData_event_reader.cpp
+	@$(TESTDIRSTART) ".obj/../src" $(TESTDIREND) $(MKDIR) ".obj/../src"
+	$(COMPILE.cc) $(EXPORTFLAGS) $(OUTPUT_OPTION) ../src/sacpp_SALData_event_reader.cpp
 clean:
-	-$(RM) $(OBJS)
+	-$(RM) $(OBJ1) $(OBJ2) $(OBJ3)
 
 realclean: clean
-	-$(RM) $(BIN)
+	-$(RM) $(BIN1) $(BIN2) $(BIN3)
 	-$(RM) .obj/
 
 check-syntax:

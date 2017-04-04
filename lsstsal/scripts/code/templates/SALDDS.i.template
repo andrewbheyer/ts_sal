@@ -43,6 +43,10 @@
       double rcvdTime;
       salU64  origin;
       char   domainName[128];
+      salActor sal[SAL__ACTORS_MAXCOUNT];
+      int lastActor_telemetry;
+      int lastActor_command;
+      int lastActor_event;
 
     public:
 
@@ -59,7 +63,8 @@
 
       double getCurrentTime();
       double getRcvdTime();
-
+      void setTuneableQos(char *topicName);
+      void setDefaultQos(char *topicName);
       void salShutdown();
 #ifdef SAL_SUBSYSTEM_ID_IS_KEYED
       void salInitialize(int aKey);
@@ -79,7 +84,14 @@
       int getDebugLevel( int level );
       int getOrigin();
       int getProperty(salCHAR *property, salCHAR *value);
+      salReturn getIntProperty(actorIdx,salCHAR *property, int *value);
+      salReturn getDblProperty(actorIdx,salCHAR *property, double *value);
+      salReturn getBoolProperty(actorIdx,salCHAR *property, boolean *value);
       salReturn setProperty(salCHAR *property, salCHAR *value);
+      int getIntProperty(int actorIdx,salCHAR *property);
+      double getDblProperty(int actorIdx,salCHAR *property);
+      bool getBoolProperty(int actorIdx,salCHAR *property);
+      void setMaxSamples(int actorIdx, int n);
       void logError(salReturn status);
 
       salReturn logEvent( char *message, int priority );      

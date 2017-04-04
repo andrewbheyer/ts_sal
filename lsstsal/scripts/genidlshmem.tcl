@@ -51,38 +51,52 @@ global ITEMLIST
                }
    }
 }
+
+proc expanditem { fo2 name type nd } {
+   set i 1
+   while { $i <= $nd } {
+      puts $fo2 "  [set name]_[set i] [set type],"
+      incr i 1
+   }
+}
+
+
 proc nditem { fid fo2 name type nd } {
 global ITEMLIST
    switch $type {
        string -
        String { puts $fid "  string<$nd> $name;" 
-                puts $fo2 "  $name char($nd),"
+                puts $fo2 "  $name varchar,"
                 set ITEMLIST "$ITEMLIST,char.$name"
               }
        int    -
        long   -
        Int    { puts $fid "  long $name\[$nd\];" 
-                puts $fo2 "  [set name] int\[$nd\]," ; set ITEMLIST "$ITEMLIST,int.[set name].$nd"
+                expanditem $fo2 $name int $nd ; set ITEMLIST "$ITEMLIST,int.[set name].$nd"
+              }
+       longlong    { puts $fid "  longlong $name\[$nd\];" 
+                expanditem $fo2 $name bigint $nd ; set ITEMLIST "$ITEMLIST,int.[set name].$nd"
               }
        short  -
        Short  { puts $fid "  short $name\[$nd\];" 
-                puts $fo2 "  [set name] smallint\[$nd\],"; set ITEMLIST "$ITEMLIST,short.[set name].$nd"
+                expanditem $fo2 $name smallint $nd ; set ITEMLIST "$ITEMLIST,short.[set name].$nd"
               }
        char   -
        Char   {
                 puts $fid "  string<$nd> $name;"
-                puts $fo2 "  [set name] tinyint\[$nd\],"; set ITEMLIST "$ITEMLIST,byte.[set name].$nd"
-              }       byte   -
+                expanditem $fo2 $name varchar $nd ; set ITEMLIST "$ITEMLIST,byte.[set name].$nd"
+              }
+       byte   -
        Byte   { puts $fid "  octet $name\[$nd\];"
-                puts $fo2 "  [set name] tinyint\[$nd\],"; set ITEMLIST "$ITEMLIST,byte.[set name].$nd"
+                expanditem $fo2 $name tinyint $nd ; set ITEMLIST "$ITEMLIST,byte.[set name].$nd"
               }
        float  -
        Float  { puts $fid "  float $name\[$nd\];" 
-                puts $fo2 "  [set name] real\[$nd\],"; set ITEMLIST "$ITEMLIST,float.[set name].$nd"
+                expanditem $fo2 $name $type $nd ; set ITEMLIST "$ITEMLIST,float.[set name].$nd"
                }
        double -
        Double { puts $fid "  double $name\[$nd\];" 
-                puts $fo2 "  [set name] double precision\[$nd\]," ; set ITEMLIST "$ITEMLIST,double.[set name].$nd"
+                expanditem $fo2 $name $type $nd  ; set ITEMLIST "$ITEMLIST,double.[set name].$nd"
                }
    }
 }
@@ -135,14 +149,14 @@ while { [gets $fin rec] > -1 } {
 ###  long private_host; //private"
       puts $fo2  "DROP TABLE IF EXISTS $topic;"
       puts $fo2  "CREATE TABLE $topic ("
-      puts $fo2  "  date_time timestamp NOT NULL,
+      puts $fo2  "  date_time DATETIME(6) DEFAULT CURRENT_TIME,
   private_revCode char(32),
   private_sndStamp double precision,
   private_rcvStamp double precision,
   private_seqNum int,
   private_origin int,
   private_host int,"
-      set ITEMLIST "char.revCode,double.sndStamp,double.rcvStamp,int.seqNum,int.origin,int.host"
+      set ITEMLIST "char.private_revCode,double.private_sndStamp,double.private_rcvStamp,int.private_seqNum,int.private_origin,int.private_host"
    }
    set name [lindex [split [lindex $rec 1] .] end]
    set type [lindex $rec 3]

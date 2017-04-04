@@ -239,13 +239,21 @@ if { $OPTIONS(sal) } {
   set DONE_CMDEVT 0
   set ONEDDSGEN 0
   set ONEPYTHON 0
+  if { [expr $OPTIONS(cpp) + $OPTIONS(isocpp) + $OPTIONS(java) + $OPTIONS(python)] == 0 } {
+     stdlog "========================================================================"
+     stdlog "ERROR :  sal option requires a language choice , cpp/isocpp/java/python"
+     stdlog "========================================================================"
+     exit
+  }
   cd $SAL_WORK_DIR
   source $SAL_DIR/gensimplesample.tcl
   set base [lindex [split [lindex $TARGETS 0] _] 0]
   if { [file exists $SAL_WORK_DIR/idl-templates/validated/[set base]_cmddef.tcl] } {
         source $SAL_WORK_DIR/idl-templates/validated/[set base]_cmddef.tcl
   } else {
+        stdlog "================================================"
         stdlog "WARNING : No Command definitions found for $base"
+        stdlog "================================================"
   }
   if { [file exists $SAL_WORK_DIR/idl-templates/validated/[set base]_evtdef.tcl] } {
         source $SAL_WORK_DIR/idl-templates/validated/[set base]_evtdef.tcl

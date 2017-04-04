@@ -61,6 +61,9 @@ public class salActor {
         public int cmdSeqNum;
         public int rcvSeqNum;
         public int rcvOrigin;
+        public int error;
+        public int ack;
+        public String result;
         public double sndStamp;
         public double rcvStamp;
 	public double sampleAge;

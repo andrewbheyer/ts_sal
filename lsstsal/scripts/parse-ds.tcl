@@ -22,7 +22,7 @@ proc blogsum { f t s {url no} } {
   puts $f "<TR><TD style=\"font-weight: bold;\"><big><big>$t</TD><TD style=\"font-weight: bold; text-align: right;\"><big><big>$perday</TD></TR>"
 }
 
-set scriptdir $env(SAL_DIR)/scripts
+set scriptdir $env(SAL_DIR)
 source $scriptdir/datastream_desc.tcl
 source $scriptdir/camera-subsysdesc.tcl
 
@@ -61,8 +61,10 @@ while { [gets $fin rec] > -1 } {
    }
    if { [string trim [lindex $s 5]] == "Frequency" } {
       set freq($top) [string trim [lindex [lindex $s 6] 0]]
+if { $freq($top) < 1 } {set freq($top) 0.5}
       if { $freq($top) == "Infrequent" } {set freq($top) 0.001}
    }
+   set sour($top) 1
    if { [string trim [lindex $s 5]] == "Number of sources" } {
       set sour($top) [string trim [lindex [lindex $s 6] 0]]
    }
@@ -74,6 +76,7 @@ while { [gets $fin rec] > -1 } {
       set ty [string trim [lindex $it 1]]
       set n [string trim [lindex $it 2]]
       if { $n == "" } {set n 1 ; set strn [lindex $s 7]}
+      if { [info exists strn] == 0 } {set strn 32}
       set nf [expr $n * $freq($top) * $sour($top)]
       switch $ty {
             string -
@@ -140,6 +143,8 @@ produce large image/vector datasets (BLOBs) are shown here.<P>
 set bgt 0
 foreach s [lsort [array names BLOBS]] {
     set sdot [join [split $s _] .]
+    set sour($sdot) 1
+    set freq($sdot) 0.054
     set bpp [expr [string trim [lindex $BLOBS($s) 1] bit] / 8]
     set siz [split [lindex $BLOBS($s) 0] x]
     set bbytes [expr $bpp*$sour($sdot)*$freq($sdot)*[lindex $siz 0]*[lindex $siz 1]*[lindex $siz 2]]

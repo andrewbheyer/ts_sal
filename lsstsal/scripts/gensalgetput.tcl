@@ -201,6 +201,8 @@ void SAL_SALData::initSalActors ()
       sal\[i\].isActive = false;
       sal\[i\].maxSamples = LENGTH_UNLIMITED;
       sal\[i\].sampleAge = 100.0;
+      sal\[i\].historyDepth = 10000;
+      sal\[i\].tuneableQos = true;
     \}
 "
    set idx 0

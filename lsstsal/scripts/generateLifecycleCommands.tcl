@@ -164,5 +164,25 @@ set SAL_LIFECYCLE_COMMANDS "
     </item>
 </SALCommand>
 
+<SALCommand>
+ <Subsystem>[set SALSubsys]</Subsystem>
+ <Version>$SALVERSION</Version>
+ <Author>salgenerator</Author>
+ <EFDB_Topic>[set SALSubsys]_command_SetValue</EFDB_Topic>
+ <Alias>SetValue</Alias>
+ <Device>controller</Device>
+ <Property>configuration</Property>
+ <Action>set</Action>
+ <Value></Value>
+ <Explanation>http://sal.lsst.org/SAL/Commands/[set SALSubsys]_command_SetValue.html</Explanation>
+    <item>
+      <EFDB_Name>json_parameters</EFDB_Name>
+      <Description>JSON string describing the parameter(s) to be set and their values</Description>
+       <IDL_Type>string</IDL_Type>
+      <Units> </Units>
+      <Count>1</Count>
+    </item>
+</SALCommand>
+
 </SALCommandSet>"
 

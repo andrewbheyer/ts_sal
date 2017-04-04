@@ -7,7 +7,7 @@ proc calcshmid { subsys } {
 }
 
 
-set SYSDIC(systems) "auxscope calibration camera dm  dome domeADB domeAPS domeLouvers domeLWS domeMONCS domeTHCS environment hexapod lasercal m1m3 m2ms MTMount network ocs operations power rotator scheduler seeing skycam system tcs"
+set SYSDIC(systems) "accl auxscope calibration camera dm  dome domeADB domeAPS domeLouvers domeLWS domeMONCS domeTHCS environment EXA hexapod lasercal m1m3 m2ms MTMount network ocs operations power rotator scheduler seeing skycam system tcs"
 foreach s $SYSDIC(systems) {set SYSDIC($s,type) system}
 
 set SYSDIC(datatypes) "byte short int long float string int64 double ubyte ushort uint ulong"
@@ -40,7 +40,10 @@ are completed to increasing levels of detail.
 <P>
 <H2>Systems and Subsystems</H2><P>"
 
-set SYSDIC(subsystems) "auxscope - Auxiliary telescope
+set SYSDIC(subsystems) "accl.m1m3 - Main mirror accellerometers
+accl.m2ms - M2 mirror accellerometers
+accl.tma - Mount accellerometers
+auxscope - Auxiliary telescope
 auxscope.Application - Derived metadata
 auxscope.Electrical - Electrical system monitoring
 auxscope.Metrology - Positional information

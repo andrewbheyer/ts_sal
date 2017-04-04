@@ -9,6 +9,8 @@
   #include <fstream>
   #include <string.h>
   #include <stdlib.h>
+  #include <stdio.h>
+  #include <string.h>
   #include "SAL_defines.h"
   #include "ccpp_dds_dcps.h"
 // INSERT TYPE INCLUDES
@@ -61,9 +63,14 @@
       int 			rcvSeqNum;
       int 			rcvOrigin;
       int			maxSamples;
+      int			error;
+      int			ack;
+      char			result[128];
       long long 		sndStamp[2];
       long long			rcvStamp[2];
       double			sampleAge;
+      int                       historyDepth;
+      bool                      tuneableQos;
   };
 #endif
 
@@ -142,7 +149,8 @@
 
       double getCurrentTime();
       double getRcvdTime();
-
+      void setTuneableQos(char *topicName);
+      void setDefaultQos(char *topicName);
       salReturn getResponse(SALData::ackcmdSeq data);
       void salShutdown();
 #ifdef SAL_SUBSYSTEM_ID_IS_KEYED
@@ -166,7 +174,11 @@
       int getDebugLevel( int level );
       int getOrigin();
       int getProperty(salCHAR *property, salCHAR *value);
-      salReturn setProperty(salCHAR *property, salCHAR *value);
+      int setProperty(salCHAR *property, salCHAR *value);
+      int getIntProperty(int actorIdx,salCHAR *property);
+      double getDblProperty(int actorIdx,salCHAR *property);
+      bool getBoolProperty(int actorIdx,salCHAR *property);
+      void setMaxSamples(int actorIdx, int n);
       void logError(salReturn status);
 //      salTIME currentTime();
 

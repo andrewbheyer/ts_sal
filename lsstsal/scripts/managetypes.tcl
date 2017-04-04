@@ -463,6 +463,7 @@ set TYPESIZE(unsignedlong)   4
 set TYPESIZE(unsignedlonglong) 8
 
 set TYPEFORMAT(byte)   "%d"
+set TYPEFORMAT(char)   "%s"
 set TYPEFORMAT(octet)  "%d"
 set TYPEFORMAT(short)  "%d"
 set TYPEFORMAT(int16)  "%d"

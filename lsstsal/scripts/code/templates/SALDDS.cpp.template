@@ -102,6 +102,23 @@ double SAL_SALData::getRcvdTime()
      return rcvdTime;
 }
 
+void SAL_SALData::setTuneableQos (char *topicName) {
+    int actorIdx;
+    actorIdx = getActorIndex(topicName);
+    if (actorIdx > 0) {
+       sal[actorIdx].tuneableQos = true;
+    }
+}
+
+
+void SAL_SALData::setDefaultQos (char *topicName) {
+    int actorIdx;
+    actorIdx = getActorIndex(topicName);
+    if (actorIdx > 0) {
+       sal[actorIdx].tuneableQos = false;
+    }
+}
+
 
 int SAL_SALData::getActorIndex (char *topicName)
 {
@@ -162,6 +179,15 @@ bool SAL_SALData::actorProcessor(int actorIdx) {
      return true;
   }
   return false;
+}
+
+
+int SAL_SALData::getIntProperty(int actorIdx,salCHAR *property)
+{
+  if (strcmp("ack", property) == 0) {return sal[actorIdx].ack;}
+  if (strcmp("error", property) == 0) {return sal[actorIdx].error;}
+  if (strcmp("rcvSeqNum", property) == 0) {return sal[actorIdx].rcvSeqNum;}
+  return SAL__OK;
 }
 
 
@@ -689,6 +715,17 @@ int SAL_SALData::getOrigin()
    }
    return status;
 }
+      
+void SAL_SALData::setMaxSamples(int actorIdx, int n)
+{
+    if ( n < 0 ) {
+       sal[actorIdx].maxSamples = LENGTH_UNLIMITED;
+    } else {
+       sal[actorIdx].maxSamples = n;
+    }
+}
+
+
 
 int SAL_SALData::getProperty(salCHAR *property, salCHAR *value)
 {
@@ -970,7 +1007,7 @@ salReturn SAL_SALData::salCommand(char *cmdAlias)
 #else
   createReader2(SAL__SALData_ackcmd_ACTOR,false);
 #endif
-  sal[SAL__SALData_ackcmd_ACTOR].sampleAge = 100.0;
+  sal[SAL__SALData_ackcmd_ACTOR].sampleAge = 1.0;
   sal[actorIdx].isReader = true;
   createWriter(actorIdx,true);
   sal[actorIdx].isCommand = true;
@@ -1081,7 +1118,7 @@ salReturn SAL_SALData::salProcessor(char *cmdAlias)
   createWriter2(SAL__SALData_ackcmd_ACTOR,autodispose_unregistered_instances);
   sal[actorIdx].isWriter = true;
   sal[actorIdx].isProcessor = true;
-  sal[actorIdx].sampleAge = 100.0;
+  sal[actorIdx].sampleAge = 1.0;
   return SAL__OK;
 }
 
@@ -1108,20 +1145,23 @@ salReturn SAL_SALData::salEvent(char *topicName)
 
 void SAL_SALData::salShutdown()
 {
-  participant->delete_contained_entities();
-  deleteParticipant();
+  if (participant != NULL) {
+    participant->delete_contained_entities();
+    deleteParticipant();
+  }
 }
 
 void SAL_SALData::createParticipant(const char *partitiontName)
 {
-  domain = DOMAIN_ID_DEFAULT;
-  dpf = DomainParticipantFactory::get_instance();
-  checkHandle(dpf.in(), "DDS::DomainParticipantFactory::get_instance");
-  participant = dpf->create_participant(domain, PARTICIPANT_QOS_DEFAULT, NULL,
-    STATUS_MASK_NONE);
-  checkHandle(participant.in(),
-    "DDS::DomainParticipantFactory::create_participant");
-  partition = partitiontName;
+  
+  if (participant == NULL) {
+    domain = DOMAIN_ID_DEFAULT;
+    dpf = DomainParticipantFactory::get_instance();
+    checkHandle(dpf.in(), "DDS::DomainParticipantFactory::get_instance");
+    participant = dpf->create_participant(domain, PARTICIPANT_QOS_DEFAULT, NULL,STATUS_MASK_NONE);
+    checkHandle(participant.in(),"DDS::DomainParticipantFactory::create_participant");
+    partition = partitiontName;
+  }
 }
 
 void SAL_SALData::deleteParticipant()
@@ -1199,14 +1239,16 @@ void SAL_SALData::createTopic(int actorIdx)
 {
   status = participant->get_default_topic_qos(sal[actorIdx].reliable_topic_qos);
   checkStatus(status, "DDS::DomainParticipant::get_default_topic_qos");
-  sal[actorIdx].reliable_topic_qos.reliability.kind = RELIABLE_RELIABILITY_QOS;
-  sal[actorIdx].reliable_topic_qos.durability.kind = TRANSIENT_DURABILITY_QOS;
-  sal[actorIdx].reliable_topic_qos.history.kind = KEEP_LAST_HISTORY_QOS;
-  sal[actorIdx].reliable_topic_qos.history.depth = 10000;
+  if ( sal[actorIdx].tuneableQos) {
+    sal[actorIdx].reliable_topic_qos.reliability.kind = RELIABLE_RELIABILITY_QOS;
+    sal[actorIdx].reliable_topic_qos.durability.kind = TRANSIENT_DURABILITY_QOS;
+    sal[actorIdx].reliable_topic_qos.history.kind = KEEP_LAST_HISTORY_QOS;
+    sal[actorIdx].reliable_topic_qos.history.depth = sal[actorIdx].historyDepth;
 
   /* Make the tailored QoS the new default. */
-  status = participant->set_default_topic_qos(sal[actorIdx].reliable_topic_qos);
-  checkStatus(status, "DDS::DomainParticipant::set_default_topic_qos");
+    status = participant->set_default_topic_qos(sal[actorIdx].reliable_topic_qos);
+    checkStatus(status, "DDS::DomainParticipant::set_default_topic_qos");
+  }
 
   sal[actorIdx].topic = participant->create_topic(sal[actorIdx].topicName, sal[actorIdx].typeName, sal[actorIdx].reliable_topic_qos,
     NULL, STATUS_MASK_NONE);
@@ -1217,14 +1259,16 @@ void SAL_SALData::createTopic2(int actorIdx)
 {
   status = participant->get_default_topic_qos(sal[actorIdx].reliable_topic_qos2);
   checkStatus(status, "DDS::DomainParticipant::get_default_topic_qos");
-  sal[actorIdx].reliable_topic_qos2.reliability.kind = RELIABLE_RELIABILITY_QOS;
-  sal[actorIdx].reliable_topic_qos2.durability.kind = TRANSIENT_DURABILITY_QOS;
-  sal[actorIdx].reliable_topic_qos2.history.kind = KEEP_LAST_HISTORY_QOS;
-  sal[actorIdx].reliable_topic_qos2.history.depth = 10000;
+  if ( sal[actorIdx].tuneableQos) {
+    sal[actorIdx].reliable_topic_qos2.reliability.kind = RELIABLE_RELIABILITY_QOS;
+    sal[actorIdx].reliable_topic_qos2.durability.kind = TRANSIENT_DURABILITY_QOS;
+    sal[actorIdx].reliable_topic_qos2.history.kind = KEEP_LAST_HISTORY_QOS;
+    sal[actorIdx].reliable_topic_qos2.history.depth = sal[actorIdx].historyDepth;
 
   /* Make the tailored QoS the new default. */
-  status = participant->set_default_topic_qos(sal[actorIdx].reliable_topic_qos2);
-  checkStatus(status, "DDS::DomainParticipant::set_default_topic_qos");
+    status = participant->set_default_topic_qos(sal[actorIdx].reliable_topic_qos2);
+    checkStatus(status, "DDS::DomainParticipant::set_default_topic_qos");
+  }
 
   sal[actorIdx].topic2 = participant->create_topic(sal[actorIdx].topicName, sal[actorIdx].typeName2, sal[actorIdx].reliable_topic_qos2,
     NULL, STATUS_MASK_NONE);
@@ -1235,14 +1279,16 @@ void SAL_SALData::createTopic(int actorIdx, char *topicName)
 {
   status = participant->get_default_topic_qos(sal[actorIdx].reliable_topic_qos);
   checkStatus(status, "DDS::DomainParticipant::get_default_topic_qos");
-  sal[actorIdx].reliable_topic_qos.reliability.kind = RELIABLE_RELIABILITY_QOS;
-  sal[actorIdx].reliable_topic_qos.durability.kind = TRANSIENT_DURABILITY_QOS;
-  sal[actorIdx].reliable_topic_qos.history.kind = KEEP_LAST_HISTORY_QOS;
-  sal[actorIdx].reliable_topic_qos.history.depth = 10000;
+  if ( sal[actorIdx].tuneableQos) {
+    sal[actorIdx].reliable_topic_qos.reliability.kind = RELIABLE_RELIABILITY_QOS;
+    sal[actorIdx].reliable_topic_qos.durability.kind = TRANSIENT_DURABILITY_QOS;
+    sal[actorIdx].reliable_topic_qos.history.kind = KEEP_LAST_HISTORY_QOS;
+    sal[actorIdx].reliable_topic_qos.history.depth = sal[actorIdx].historyDepth;
 
   /* Make the tailored QoS the new default. */
-  status = participant->set_default_topic_qos(sal[actorIdx].reliable_topic_qos);
-  checkStatus(status, "DDS::DomainParticipant::set_default_topic_qos");
+    status = participant->set_default_topic_qos(sal[actorIdx].reliable_topic_qos);
+    checkStatus(status, "DDS::DomainParticipant::set_default_topic_qos");
+  }
 
   sal[actorIdx].topic = participant->create_topic(topicName, sal[actorIdx].typeName, sal[actorIdx].reliable_topic_qos,
     NULL, STATUS_MASK_NONE);
@@ -1253,14 +1299,16 @@ void SAL_SALData::createTopic2(int actorIdx, char *topicName)
 {
   status = participant->get_default_topic_qos(sal[actorIdx].reliable_topic_qos2);
   checkStatus(status, "DDS::DomainParticipant::get_default_topic_qos");
-  sal[actorIdx].reliable_topic_qos2.reliability.kind = RELIABLE_RELIABILITY_QOS;
-  sal[actorIdx].reliable_topic_qos2.durability.kind = TRANSIENT_DURABILITY_QOS;
-  sal[actorIdx].reliable_topic_qos2.history.kind = KEEP_LAST_HISTORY_QOS;
-  sal[actorIdx].reliable_topic_qos2.history.depth = 10000;
+  if ( sal[actorIdx].tuneableQos) {
+    sal[actorIdx].reliable_topic_qos2.reliability.kind = RELIABLE_RELIABILITY_QOS;
+    sal[actorIdx].reliable_topic_qos2.durability.kind = TRANSIENT_DURABILITY_QOS;
+    sal[actorIdx].reliable_topic_qos2.history.kind = KEEP_LAST_HISTORY_QOS;
+    sal[actorIdx].reliable_topic_qos2.history.depth = sal[actorIdx].historyDepth;
 
   /* Make the tailored QoS the new default. */
-  status = participant->set_default_topic_qos(sal[actorIdx].reliable_topic_qos2);
-  checkStatus(status, "DDS::DomainParticipant::set_default_topic_qos");
+    status = participant->set_default_topic_qos(sal[actorIdx].reliable_topic_qos2);
+    checkStatus(status, "DDS::DomainParticipant::set_default_topic_qos");
+  }
 
   sal[actorIdx].topic2 = participant->create_topic(topicName, sal[actorIdx].typeName2, sal[actorIdx].reliable_topic_qos2,
     NULL, STATUS_MASK_NONE);
@@ -1587,7 +1635,7 @@ void SAL_SALData::createReader(int actorIdx,bool filtered)
   checkHandle(sal[actorIdx].reader, "DDS::Subscriber::create_datareader ()");
   sal[actorIdx].isReader = true;
   DDS::Duration_t a_timeout;
-  a_timeout.sec = 20;
+  a_timeout.sec = 5;
   a_timeout.nanosec = 0;
   sal[actorIdx].sampleAge = 100.0;
   status = sal[actorIdx].reader->wait_for_historical_data(a_timeout);
@@ -1605,7 +1653,7 @@ void SAL_SALData::createReader2(int actorIdx,bool filtered)
   checkHandle(sal[actorIdx].reader2, "DDS::Subscriber::create_datareader ()");
   sal[actorIdx].isReader = true;
   DDS::Duration_t a_timeout;
-  a_timeout.sec = 20;
+  a_timeout.sec = 5;
   a_timeout.nanosec = 0;
   sal[actorIdx].sampleAge = 100.0;
   status = sal[actorIdx].reader2->wait_for_historical_data(a_timeout);

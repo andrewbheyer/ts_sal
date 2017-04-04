@@ -396,9 +396,13 @@ BOOST_PYTHON_MODULE(SALPY_SALData){
             "getOrigin"
             , (int ( ::SAL_SALData::* )(  ) )( &::SAL_SALData::getOrigin ) )    
         .def( 
-            "getProperty"
-            , (int ( ::SAL_SALData::* )( ::salCHAR *,::salCHAR * ) )( &::SAL_SALData::getProperty )
-            , ( bp::arg("property"), bp::arg("value") ) )    
+            "getDebugLevel"
+            , (int ( ::SAL_SALData::* )( int ) )( &::SAL_SALData::getDebugLevel )
+            , ( bp::arg("level") ) )    
+        .def( 
+            "getIntProperty"
+            , (int ( ::SAL_SALData::* )( int ,::salCHAR * ) )( &::SAL_SALData::getIntProperty )
+            , ( bp::arg("actorIdx"), bp::arg("property") ) )    
         .def( 
             "getResponse"
             , (::salReturn ( ::SAL_SALData::* )( ::SALData_ackcmdC ) )( &::SAL_SALData::getResponse )
@@ -444,6 +448,14 @@ BOOST_PYTHON_MODULE(SALPY_SALData){
             "salEvent"
             , (::salReturn ( ::SAL_SALData::* )( char * ) )( &::SAL_SALData::salEvent )
             , ( bp::arg("evtAlias") ) )    
+        .def( 
+            "setTuneableQos"
+            , (::salReturn ( ::SAL_SALData::* )( char * ) )( &::SAL_SALData::setTuneableQos )
+            , ( bp::arg("alias") ) )    
+        .def( 
+            "setDefaultQos"
+            , (::salReturn ( ::SAL_SALData::* )( char * ) )( &::SAL_SALData::setDefaultQos )
+            , ( bp::arg("alias") ) )    
         .def( 
             "salShutdown"
             , (void ( ::SAL_SALData::* )(  ) )( &::SAL_SALData::salShutdown ) )    
