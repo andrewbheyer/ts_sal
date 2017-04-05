@@ -495,7 +495,7 @@ global CMD_ALIASES CMDS SYSDIC
 	  	sal\[actorIdxCmd\].rcvSeqNum = data.value\[lastsample\].private_seqNum;
 	  	sal\[actorIdxCmd\].rcvOrigin = data.value\[lastsample\].private_origin;
 	  \} else \{
-	        System.out.println(\"=== \[getResponse_[set i]\] No ack yet!\"); 
+//	        System.out.println(\"=== \[getResponse_[set i]\] No ack yet!\"); 
 	        status = SAL__CMD_NOACK;
 	  \}
     	  SALReader.return_loan(data, infoSeq);
