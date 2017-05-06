@@ -17,4 +17,5 @@ test/m2ms*/
 test/mount*/
 test/rotator*/
 test/scheduler*/
+test/sql
 test/tcs*/
