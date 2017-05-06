@@ -43,7 +43,7 @@ typedef int	        salReturn;
 
 
 #define SAL__FASTPOLL			1000
-#define SAL__SLOWPOLL			1000000
+#define SAL__SLOWPOLL			10000
 
 // Generic return codes
 #define SAL__OK   		 0
